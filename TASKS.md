@@ -14,6 +14,11 @@ The Windows `.185` stock-server validation is complete and recorded in
 
 ## Active tasks
 
+- [ ] **PLUGIN-RENAME-001:** Canonical repository/URLs and beta0.1.6 packaging;
+  preserve installed identities and MIM0.4.11. Run stock-JAR build, affected
+  source/package checks, deterministic packaging and exact-HEAD GitHub CI;
+  publish and verify assets, then submit the four catalog manifest updates.
+
 No active MIM-DIRECT-005 commissioning work remains. Release packaging and
 publication remain separately gated by WORKFLOW.md.
 

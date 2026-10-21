@@ -1,4 +1,14 @@
-# SageTVFFmpegPlugin
+# OpenSageTV Vibe FFmpeg Plugin
+
+Repository: https://github.com/opensagetv-vibe/opensagetv-vibe-FFmpeg-Plugin
+
+The repository was renamed; installed SageTVFFmpegPlugin IDs, JAR names and
+configuration paths are unchanged. Existing releases remain available.
+
+This repository owns the SageTV integration, settings and install manifests.
+The separate [FFmpeg/MIM runtime project](https://github.com/opensagetv-vibe/opensagetv-vibe-ffmpeg-mim)
+builds its runtime dependencies; packaging FFmpeg as a plugin does not replace
+that build project. Their versions can advance independently.
 
 OpenSageTV Vibe SageTV Standard plugin and companion STVi that utilizes the separate `opensagetv-vibe/opensagetv-vibe-ffmpeg-mim` FFmpeg runtime.
 

@@ -94,7 +94,7 @@ def main() -> int:
     for manifest in out.glob("*.xml"):
         text = manifest.read_text(encoding="utf-8")
         assert "@" not in text
-        assert "github.com/opensagetv-vibe/opensagetv-vibe-SageTVFFmpegPlugin" in text
+        assert "github.com/opensagetv-vibe/opensagetv-vibe-FFmpeg-Plugin" in text
         if "STVI" in manifest.name:
             root_element = ET.parse(manifest).getroot()
             assert root_element.findtext("PluginType") == "STVI"

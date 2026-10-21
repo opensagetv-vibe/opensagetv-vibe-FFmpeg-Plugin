@@ -60,7 +60,7 @@ jobs:
           cmp /tmp/first-SHA256SUMS output/packages/SHA256SUMS
       - uses: actions/upload-artifact@v7
         with:
-          name: opensagetv-vibe-SageTVFFmpegPlugin-${{ github.sha }}
+          name: opensagetv-vibe-FFmpeg-Plugin-${{ github.sha }}
           path: output/packages/
           if-no-files-found: error
           retention-days: 14

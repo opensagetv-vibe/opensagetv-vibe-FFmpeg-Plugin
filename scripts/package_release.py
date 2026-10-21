@@ -12,7 +12,7 @@ import zipfile
 from pathlib import Path
 
 
-REPOSITORY = "opensagetv-vibe/opensagetv-vibe-SageTVFFmpegPlugin"
+REPOSITORY = "opensagetv-vibe/opensagetv-vibe-FFmpeg-Plugin"
 
 
 def require(path: Path) -> Path:

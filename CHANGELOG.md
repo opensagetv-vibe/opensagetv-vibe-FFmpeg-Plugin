@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.1.6 - 2026-10-21
+
+- Rename the source repository to opensagetv-vibe-FFmpeg-Plugin and use its
+  canonical URLs in future Linux/Windows Standard and STVi manifests.
+- Preserve installed IDs, Java classes, JAR/launcher names and settings. Only
+  the plugin version constant changes; playback code and MIM0.4.11 are unchanged.
+- Impact gates: stock-JAR Java8 compilation under JDK11, pinned stock-STV and
+  recovery/session/caption/launcher tests, source contracts, Windows launcher,
+  deterministic packaging and public manifest/checksum verification.
+- No new hardware/physical qualification or resolution of existing playback
+  limitations is claimed by this naming-only release.
+
 - 2026-10-08 commissioning: MIM-DIRECT-005 stock-plugin recovery qualifies on
   tablet/stock175 and232 with Media3/legacy/both GSY delegates, latest intent,
   canceled/expired tickets, readable2s CEA, seek/pause and unavailable fallback.
