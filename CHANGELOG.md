@@ -2,6 +2,9 @@
 
 ## 0.1.6 - 2026-10-21
 
+- Published ten independently verified public assets at e07a7b9 with green
+  CI39653287756; submitted four catalog entries in plugin-repo#131 (pending).
+
 - Rename the source repository to opensagetv-vibe-FFmpeg-Plugin and use its
   canonical URLs in future Linux/Windows Standard and STVi manifests.
 - Preserve installed IDs, Java classes, JAR/launcher names and settings. Only

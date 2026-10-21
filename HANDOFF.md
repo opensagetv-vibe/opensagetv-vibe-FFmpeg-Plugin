@@ -2,15 +2,20 @@
 
 ## Canonical repository / 0.1.6 (2026-10-21)
 
-PLUGIN-RENAME-001 prepares the requested naming-only beta. GitHub/local root
+PLUGIN-RENAME-001 published the requested naming-only beta. GitHub/local root
 is opensagetv-vibe-FFmpeg-Plugin; installed plugin IDs, JAR, Java API, launcher
 and settings stay unchanged. The separate ffmpeg-mim repository still owns
 runtime binaries: this release retains exact public MIM0.4.11 Linux/Windows
 SHA256 b0113e24... and 5f0643d3.... Stock Sage.jar d76ded98... Java8/JDK11 build,
 pinned stock-STV and recovery/session/caption/launcher tests pass. No server
 restart or physical matrix replay is needed for these metadata changes.
-Publication closes only after exact-HEAD CI, independent asset verification
-and submission of four platform/catalog entries; old release history is retained.
+Tag v0.1.6 identifies e07a7b9e95137aed6dd3c49823ae8dfc19be3c6d; exact-HEAD
+CI39653287756 passed. Two complete builds match all ten artifacts, and ten
+independent public downloads match GitHub/local SHA256 plus every dependency
+MD5. Public release checksums and output/packages/SHA256SUMS are canonical.
+Four entries submitted in OpenSageTV/sagetv-plugin-repo#131; merge remains
+external, so ordinary catalog availability is not yet claimed. Existing release
+history is retained. This follow-up is documentation only, not a rebuilt tag.
 
 ## PLUGIN-RELEASE-001 published and catalog submitted (2026-10-09)
 

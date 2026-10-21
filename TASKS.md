@@ -14,15 +14,22 @@ The Windows `.185` stock-server validation is complete and recorded in
 
 ## Active tasks
 
-- [ ] **PLUGIN-RENAME-001:** Canonical repository/URLs and beta0.1.6 packaging;
-  preserve installed identities and MIM0.4.11. Run stock-JAR build, affected
-  source/package checks, deterministic packaging and exact-HEAD GitHub CI;
-  publish and verify assets, then submit the four catalog manifest updates.
 
 No active MIM-DIRECT-005 commissioning work remains. Release packaging and
 publication remain separately gated by WORKFLOW.md.
 
 ## Checklist change ledger
+
+- [x] **PLUGIN-RENAME-001 (2026-10-21):** Canonical FFmpeg-Plugin repository
+  and beta0.1.6 published at e07a7b9; exact-source CI39653287756 passed.
+  Stock-JAR Java8/JDK11, pinned stock-STV, recovery/session/caption/launcher,
+  source and Windows bridge checks pass. Two complete builds match all ten
+  assets; independent public downloads match GitHub/local SHA256 and every
+  manifest dependency MD5. Canonical checksums remain output/packages/SHA256SUMS
+  and the public release. Four Standard/STVi catalog entries submitted in
+  OpenSageTV/sagetv-plugin-repo#131 (merge pending, not catalog availability).
+  Installed identities/settings and exact MIM0.4.11 remain unchanged; no
+  playback changes, server restart or new physical qualification claimed.
 
 - [x] **PLUGIN-RELEASE-001 - Publish approved beta0.1.5 and catalog update.**
   Closed2026-10-09: Linux/Windows Standard/STVi packages paired with MIM0.4.11;
