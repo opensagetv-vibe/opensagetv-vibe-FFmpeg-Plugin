@@ -5,10 +5,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.FutureTask;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeoutException;
 
 final class MimRuntime {
     private final RuntimePaths paths;
@@ -17,6 +21,90 @@ final class MimRuntime {
     private volatile Snapshot hardwareTest = Snapshot.empty();
 
     MimRuntime(RuntimePaths paths) { this.paths = paths; }
+
+    /** A preview is a bounded ordinary MIM thumbnail, never a second playback
+     * stream. Require the already qualified Linux child-isolation policy and
+     * transparent mode; an administrator's always-transcode policy must not
+     * silently turn a JPEG request into a hardware H.264 job. Windows remains
+     * unadvertised until its distinct physical cancellation gate qualifies. */
+    boolean thumbnailSupported() {
+        if (paths.windows || !"healthy".equals(health())) return false;
+        try {
+            IniDocument ini=IniDocument.load(paths.ini);
+            return ini.getBoolean("general","enabled",true)
+                    && "passthrough".equalsIgnoreCase(ini.get("general","mode","passthrough").trim())
+                    && ini.getBoolean("safety","isolate_child_process",true);
+        } catch(IOException unavailable) { return false; }
+    }
+
+    ThumbnailJob thumbnail(Path source,long positionMs) {
+        if(source==null||positionMs<0||positionMs>14L*86400000L)
+            throw new IllegalArgumentException("invalid_preview_position");
+        return new ThumbnailJob(source,positionMs);
+    }
+
+    /** The existing runtime owner retains the process handle through teardown.
+     * No source/output path is supplied by HTTP callers and no image is written
+     * to server files. Parent-death isolation (qualified above) also retires the
+     * exact Linux child if a cancelled wrapper needs forcible termination. */
+    final class ThumbnailJob {
+        private final Path source;
+        private final long positionMs;
+        private volatile Process process;
+        private volatile boolean cancelled;
+        ThumbnailJob(Path source,long positionMs){this.source=source;this.positionMs=positionMs;}
+        synchronized void cancel(){cancelled=true;if(process!=null)process.destroy();}
+        byte[] run() throws IOException {
+            if(!thumbnailSupported())throw new IOException("preview_runtime_unavailable");
+            Process owned=null;FutureTask<byte[]> reader=null;
+            try {
+                ProcessBuilder builder=new ProcessBuilder(paths.mimExecutable.toString(),
+                        "-hide_banner","-loglevel","error","-ss",
+                        String.format(java.util.Locale.US,"%.3f",positionMs/1000.0),
+                        "-i",source.toString(),"-map","0:v:0","-an","-sn",
+                        "-threads","1","-frames:v","1","-vf","scale=192:108",
+                        "-c:v","mjpeg","-q:v","5","-f","image2pipe","pipe:1");
+                builder.directory(paths.runtimeDir.toFile());
+                builder.environment().put("SAGETV_FFMPEG_MIM_INI",paths.ini.toString());
+                builder.redirectError(ProcessBuilder.Redirect.INHERIT);
+                synchronized(this){
+                    if(cancelled)throw new IOException("preview_cancelled");
+                    process=owned=builder.start();
+                }
+                final InputStream input=owned.getInputStream();
+                reader=new FutureTask<byte[]>(()->{
+                    ByteArrayOutputStream bytes=new ByteArrayOutputStream();
+                    byte[] buffer=new byte[2048];int count;
+                    while((count=input.read(buffer))!=-1){
+                        if(bytes.size()+count>32768){cancel();throw new IOException("preview_image_too_large");}
+                        bytes.write(buffer,0,count);
+                    }
+                    return bytes.toByteArray();
+                });
+                Thread output=new Thread(reader,"vibe-mim-preview-output");output.setDaemon(true);output.start();
+                if(!owned.waitFor(3000,TimeUnit.MILLISECONDS))throw new IOException("preview_timeout");
+                byte[] image=reader.get(500,TimeUnit.MILLISECONDS);
+                if(cancelled||owned.exitValue()!=0)throw new IOException("preview_cancelled_or_failed");
+                if(image.length<4||(image[0]&255)!=255||(image[1]&255)!=216
+                        ||(image[image.length-2]&255)!=255||(image[image.length-1]&255)!=217)
+                    throw new IOException("preview_invalid_jpeg");
+                return image;
+            } catch(InterruptedException interrupted){
+                Thread.currentThread().interrupt();throw new IOException("preview_interrupted");
+            } catch(ExecutionException failed){throw new IOException("preview_output_failed");
+            } catch(TimeoutException timedOut){throw new IOException("preview_output_timeout");
+            } finally {
+                if(owned!=null){
+                    owned.destroy();
+                    try {if(!owned.waitFor(500,TimeUnit.MILLISECONDS))owned.destroyForcibly();}
+                    catch(InterruptedException interrupted){owned.destroyForcibly();Thread.currentThread().interrupt();}
+                    try {owned.getInputStream().close();}catch(IOException ignored){}
+                }
+                if(reader!=null)reader.cancel(true);
+                synchronized(this){process=null;}
+            }
+        }
+    }
 
     Snapshot status(boolean force) {
         long now = System.currentTimeMillis();

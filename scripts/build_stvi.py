@@ -451,6 +451,7 @@ def add_setup_item(module: ET.Element) -> None:
 CATEGORIES: tuple[tuple[str, tuple[str, ...]], ...] = (
     ("Playback & Transcoding", (
         "general.enabled", "filters.deinterlace", "audio.mode",
+        "stdinctrl.runtime_bitrate_control",
         "closed_captions.preserve_a53cc", "seek.fast_seek",
         "caption_side_channel.enabled", "caption_side_channel.bind_address",
         "caption_side_channel.api_port",
@@ -461,6 +462,7 @@ CATEGORIES: tuple[tuple[str, tuple[str, ...]], ...] = (
         "capabilities.ffmpegVersion",
     )),
     ("Hardware Test", (
+        "action.runBitrateTest", "runtimeBitrateTest.status", "runtimeBitrateTest.reportPath",
         "action.runHardwareTest", "action.exportHardwareReport",
     )),
     ("Runtime Status", (
@@ -1112,7 +1114,10 @@ def build_hardware_test_dashboard(stock: ET.Element) -> ET.Element:
         child(panel, name, value)
     add_dashboard_button(panel, stock, "RUN TEST", "action.runHardwareTest", 1)
     add_dashboard_button(panel, stock, "EXPORT TEST", "action.exportHardwareReport", 2)
+    add_dashboard_button(panel, stock, "BITRATE TEST", "action.runBitrateTest", 3)
     fields = (
+        ("BITRATE TEST", "runtimeBitrateTest.status"),
+        ("BITRATE REPORT", "runtimeBitrateTest.reportPath"),
         ("STATE", "hardwareTest.state"),
         ("SUMMARY", "hardwareTest.summary"),
         ("BACKEND", "hardwareTest.selectedBackend"),
@@ -1128,7 +1133,9 @@ def build_hardware_test_dashboard(stock: ET.Element) -> ET.Element:
         panel,
         fields,
         "VIBEFFMPEG-HARDWARE-DASHBOARD-RESULTS",
-        "0.78",
+        # Three action rows (.095 each) plus padding must fit the dashboard.
+        # The old two-button .78 block clipped the new bitrate result/footer.
+        "0.66",
         blank_after=2,
     )
     return resolve_plugin_panel(panel, "VIBEFFMPEG-HARDWARE-DASHBOARD")

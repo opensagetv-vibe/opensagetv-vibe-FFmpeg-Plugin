@@ -87,19 +87,26 @@ final class IniDocument {
             Files.copy(path, path.resolveSibling(path.getFileName().toString() + ".bak"),
                     StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.COPY_ATTRIBUTES);
         }
+        saveTo(path);
+    }
+
+    /** Write a caller-owned snapshot, without a backup or editing the source. */
+    void saveTo(Path destination) throws IOException {
         StringBuilder out = new StringBuilder();
         for (int i = 0; i < lines.size(); i++) {
             if (i > 0) out.append(newline);
             out.append(lines.get(i));
         }
         if (trailingNewline) out.append(newline);
-        Path tmp = path.resolveSibling(path.getFileName().toString() + ".tmp");
-        Files.write(tmp, out.toString().getBytes(UTF8));
+        Path tmp = destination.resolveSibling(destination.getFileName().toString() + ".tmp");
         try {
-            Files.move(tmp, path, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.ATOMIC_MOVE);
-        } catch (AtomicMoveNotSupportedException e) {
-            Files.move(tmp, path, StandardCopyOption.REPLACE_EXISTING);
-        }
+            Files.write(tmp, out.toString().getBytes(UTF8));
+            try {
+                Files.move(tmp, destination, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.ATOMIC_MOVE);
+            } catch (AtomicMoveNotSupportedException e) {
+                Files.move(tmp, destination, StandardCopyOption.REPLACE_EXISTING);
+            }
+        } finally { Files.deleteIfExists(tmp); }
     }
 
     private int[] sectionRange(String section) {

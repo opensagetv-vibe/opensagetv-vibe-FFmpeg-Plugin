@@ -1247,10 +1247,107 @@
            <BackgroundComponent>true</BackgroundComponent>
           </Shape>
          </Item>
+         <Item Name="BITRATE TEST" Sym="VIBEFFMPEG-DASHBOARD-BUTTON-3">
+          <FixedWidth>0.94</FixedWidth>
+          <FixedHeight>0.095</FixedHeight>
+          <HorizontalAlignment>0.0</HorizontalAlignment>
+          <VerticalAlignment>0.5</VerticalAlignment>
+          <Action Name="SetConfigResult = SetPluginConfigValue(Plugin, &quot;action.runBitrateTest&quot;, GetPluginConfigValue(Plugin, &quot;action.runBitrateTest&quot;))" Sym="VIBEFFMPEG-DASHBOARD-BUTTON-3-INVOKE">
+           <Action Name="Refresh()" Sym="VIBEFFMPEG-DASHBOARD-BUTTON-3-REFRESH" />
+          </Action>
+          <Text Name="BITRATE TEST" Sym="VIBEFFMPEG-DASHBOARD-BUTTON-3-TEXT">
+           <FixedWidth>1.0</FixedWidth>
+           <FixedHeight>1.0</FixedHeight>
+           <Insets>0.025,0.005,0.025,0.005</Insets>
+           <FontSize>16</FontSize>
+           <TextAlignment>0.0</TextAlignment>
+           <VerticalAlignment>0.5</VerticalAlignment>
+           <ForegroundColor>0xFFFFFF</ForegroundColor>
+           <ForegroundSelectedColor>0xFFFFFF</ForegroundSelectedColor>
+           <TextShadow>false</TextShadow>
+          </Text>
+          <Conditional ID="1800301" Name="Focused" Sym="VIBEFFMPEG-DASHBOARD-BUTTON-3-FOCUS-001">
+           <Branch ID="1800302" Name="true" Sym="VIBEFFMPEG-DASHBOARD-BUTTON-3-FOCUS-002">
+            <Action ID="1800303" Name="&quot;REM Draw the normal button highlight image&quot;" Sym="VIBEFFMPEG-DASHBOARD-BUTTON-3-FOCUS-003">
+             <Action Name="gButtonHighlight" Sym="VIBEFFMPEG-DASHBOARD-BUTTON-3-FOCUS-004">
+              <Image Name="Button Highlight" Sym="VIBEFFMPEG-DASHBOARD-BUTTON-3-FOCUS-005">
+               <FixedWidth>1.0</FixedWidth>
+               <FixedHeight>1.0</FixedHeight>
+               <PreserveAspectRatio>false</PreserveAspectRatio>
+               <ResizeImage>true</ResizeImage>
+               <AutoRepeatAction>false</AutoRepeatAction>
+               <BackgroundComponent>true</BackgroundComponent>
+               <ScalingInsets>=gButtonHighlightScalingInsets</ScalingInsets>
+               <MouseTransparency>false</MouseTransparency>
+               <CropToFill>false</CropToFill>
+               <ScaleDiffuse>false</ScaleDiffuse>
+               <BGLoad>false</BGLoad>
+               <Action Ref="35533" Name="&quot;REM Focus tracker eff..." />
+              </Image>
+             </Action>
+            </Action>
+           </Branch>
+           <Branch ID="1800304" Name="Focused" Sym="VIBEFFMPEG-DASHBOARD-BUTTON-3-FOCUS-006">
+            <Action ID="1800305" Name="&quot;REM Draw the button BG -- dividers around items.&quot;" Sym="VIBEFFMPEG-DASHBOARD-BUTTON-3-FOCUS-007">
+             <Action Name="gButtonDividerImage" Sym="VIBEFFMPEG-DASHBOARD-BUTTON-3-FOCUS-008">
+              <Image Name="Button Divider image Top" Sym="VIBEFFMPEG-DASHBOARD-BUTTON-3-FOCUS-009">
+               <ForegroundAlpha>=gButtonDividerAlpha/255.0</ForegroundAlpha>
+               <AnchorX>0.5</AnchorX>
+               <AnchorY>0.0</AnchorY>
+               <AnchorPointX>0.5</AnchorPointX>
+               <AnchorPointY>0.0</AnchorPointY>
+               <FixedWidth>0.85</FixedWidth>
+               <FixedHeight>2</FixedHeight>
+               <PreserveAspectRatio>false</PreserveAspectRatio>
+               <ResizeImage>true</ResizeImage>
+               <AutoRepeatAction>false</AutoRepeatAction>
+               <BackgroundComponent>true</BackgroundComponent>
+               <MouseTransparency>false</MouseTransparency>
+               <CropToFill>false</CropToFill>
+               <ScaleDiffuse>false</ScaleDiffuse>
+               <BGLoad>false</BGLoad>
+              </Image>
+             </Action>
+             <Action Name="gButtonDividerImage" Sym="VIBEFFMPEG-DASHBOARD-BUTTON-3-FOCUS-010">
+              <Image Name="Button Divider image Bottom" Sym="VIBEFFMPEG-DASHBOARD-BUTTON-3-FOCUS-011">
+               <ForegroundAlpha>=gButtonDividerAlpha/255.0</ForegroundAlpha>
+               <AnchorX>0.5</AnchorX>
+               <AnchorY>1.0</AnchorY>
+               <AnchorPointX>0.5</AnchorPointX>
+               <AnchorPointY>1.0</AnchorPointY>
+               <FixedWidth>0.85</FixedWidth>
+               <FixedHeight>2</FixedHeight>
+               <PreserveAspectRatio>false</PreserveAspectRatio>
+               <ResizeImage>true</ResizeImage>
+               <AutoRepeatAction>false</AutoRepeatAction>
+               <BackgroundComponent>true</BackgroundComponent>
+               <MouseTransparency>false</MouseTransparency>
+               <CropToFill>false</CropToFill>
+               <ScaleDiffuse>false</ScaleDiffuse>
+               <BGLoad>false</BGLoad>
+              </Image>
+             </Action>
+            </Action>
+           </Branch>
+          </Conditional>
+          <Shape Name="Row Separator" Sym="VIBEFFMPEG-DASHBOARD-BUTTON-3-SEPARATOR">
+           <ForegroundColor>0xB8B8B8</ForegroundColor>
+           <ForegroundAlpha>105</ForegroundAlpha>
+           <AnchorX>0.5</AnchorX>
+           <AnchorY>1.0</AnchorY>
+           <AnchorPointX>0.5</AnchorPointX>
+           <AnchorPointY>1.0</AnchorPointY>
+           <FixedWidth>0.92</FixedWidth>
+           <FixedHeight>0.003</FixedHeight>
+           <ShapeType>Rectangle</ShapeType>
+           <ShapeFill>true</ShapeFill>
+           <BackgroundComponent>true</BackgroundComponent>
+          </Shape>
+         </Item>
          <Panel Name="Read-Only Dashboard" Sym="VIBEFFMPEG-HARDWARE-DASHBOARD-RESULTS-BLOCK">
           <Layout>Horizontal</Layout>
           <FixedWidth>0.94</FixedWidth>
-          <FixedHeight>0.78</FixedHeight>
+          <FixedHeight>0.66</FixedHeight>
           <HorizontalAlignment>0.0</HorizontalAlignment>
           <VerticalAlignment>0.0</VerticalAlignment>
           <FocusableCondition>false</FocusableCondition>
@@ -1261,7 +1358,7 @@
            <HorizontalAlignment>0.0</HorizontalAlignment>
            <VerticalAlignment>0.0</VerticalAlignment>
            <FocusableCondition>false</FocusableCondition>
-           <Action Name="&quot;STATE:\nSUMMARY:\nBACKEND:\n \nVAAPI:\nQSV:\nQSV Fallback:\nNVENC:\nAMF:\nD3D12VA:\nSoftware:&quot;" Sym="VIBEFFMPEG-HARDWARE-DASHBOARD-RESULTS-LABEL-VALUE">
+           <Action Name="&quot;BITRATE TEST:\nBITRATE REPORT:\nSTATE:\n \nSUMMARY:\nBACKEND:\nVAAPI:\nQSV:\nQSV Fallback:\nNVENC:\nAMF:\nD3D12VA:\nSoftware:&quot;" Sym="VIBEFFMPEG-HARDWARE-DASHBOARD-RESULTS-LABEL-VALUE">
             <Text Name="" Sym="VIBEFFMPEG-HARDWARE-DASHBOARD-RESULTS-LABEL-TEXT">
              <FixedWidth>1.0</FixedWidth>
              <FixedHeight>1.0</FixedHeight>
@@ -1284,7 +1381,7 @@
            <HorizontalAlignment>0.0</HorizontalAlignment>
            <VerticalAlignment>0.0</VerticalAlignment>
            <FocusableCondition>false</FocusableCondition>
-           <Action Name="GetPluginConfigValue(Plugin, &quot;hardwareTest.state&quot;) + &quot;\n&quot; + GetPluginConfigValue(Plugin, &quot;hardwareTest.summary&quot;) + &quot;\n&quot; + GetPluginConfigValue(Plugin, &quot;hardwareTest.selectedBackend&quot;) + &quot;\n \n&quot; + GetPluginConfigValue(Plugin, &quot;hardwareTest.vaapi.pipeline&quot;) + &quot;\n&quot; + GetPluginConfigValue(Plugin, &quot;hardwareTest.qsv.pipeline&quot;) + &quot;\n&quot; + GetPluginConfigValue(Plugin, &quot;hardwareTest.qsv.fallbackPipeline&quot;) + &quot;\n&quot; + GetPluginConfigValue(Plugin, &quot;hardwareTest.nvenc.pipeline&quot;) + &quot;\n&quot; + GetPluginConfigValue(Plugin, &quot;hardwareTest.amf.pipeline&quot;) + &quot;\n&quot; + GetPluginConfigValue(Plugin, &quot;hardwareTest.d3d12va.pipeline&quot;) + &quot;\n&quot; + GetPluginConfigValue(Plugin, &quot;hardwareTest.software.pipeline&quot;)" Sym="VIBEFFMPEG-HARDWARE-DASHBOARD-RESULTS-VALUE">
+           <Action Name="GetPluginConfigValue(Plugin, &quot;runtimeBitrateTest.status&quot;) + &quot;\n&quot; + GetPluginConfigValue(Plugin, &quot;runtimeBitrateTest.reportPath&quot;) + &quot;\n&quot; + GetPluginConfigValue(Plugin, &quot;hardwareTest.state&quot;) + &quot;\n \n&quot; + GetPluginConfigValue(Plugin, &quot;hardwareTest.summary&quot;) + &quot;\n&quot; + GetPluginConfigValue(Plugin, &quot;hardwareTest.selectedBackend&quot;) + &quot;\n&quot; + GetPluginConfigValue(Plugin, &quot;hardwareTest.vaapi.pipeline&quot;) + &quot;\n&quot; + GetPluginConfigValue(Plugin, &quot;hardwareTest.qsv.pipeline&quot;) + &quot;\n&quot; + GetPluginConfigValue(Plugin, &quot;hardwareTest.qsv.fallbackPipeline&quot;) + &quot;\n&quot; + GetPluginConfigValue(Plugin, &quot;hardwareTest.nvenc.pipeline&quot;) + &quot;\n&quot; + GetPluginConfigValue(Plugin, &quot;hardwareTest.amf.pipeline&quot;) + &quot;\n&quot; + GetPluginConfigValue(Plugin, &quot;hardwareTest.d3d12va.pipeline&quot;) + &quot;\n&quot; + GetPluginConfigValue(Plugin, &quot;hardwareTest.software.pipeline&quot;)" Sym="VIBEFFMPEG-HARDWARE-DASHBOARD-RESULTS-VALUE">
             <Text Name="" Sym="VIBEFFMPEG-HARDWARE-DASHBOARD-RESULTS-TEXT">
              <FixedWidth>1.0</FixedWidth>
              <FixedHeight>1.0</FixedHeight>
@@ -1393,7 +1490,7 @@
           <MouseTransparency>false</MouseTransparency>
           <Action Name="Plugin = GetAvailablePluginForID(&quot;SageTVFFmpegPluginLinux&quot;)" Sym="VIBEFFMPEG-CONFIG-003">
            <Action Name="Plugin = If(Plugin != null &amp;&amp; IsPluginInstalled(Plugin), Plugin, GetAvailablePluginForID(&quot;SageTVFFmpegPluginWinx64&quot;))" Sym="VIBEFFMPEG-CONFIG-RESOLVE-PLUGIN">
-            <Action Name="If((CurrSetupArea == null || CurrSetupArea == &quot;xVibeFFmpegCategory1&quot;), CreateArray(&quot;general.enabled&quot;, &quot;filters.deinterlace&quot;, &quot;audio.mode&quot;, &quot;closed_captions.preserve_a53cc&quot;, &quot;seek.fast_seek&quot;, &quot;caption_side_channel.enabled&quot;, &quot;caption_side_channel.bind_address&quot;, &quot;caption_side_channel.api_port&quot;), If(CurrSetupArea == &quot;xVibeFFmpegCategory2&quot;, CreateArray(&quot;hardware.backend&quot;, &quot;hardware.hardware_decode&quot;, &quot;hardware.active_file_hardware_decode&quot;, &quot;capabilities.selectedBackend&quot;, &quot;capabilities.ffmpegVersion&quot;), If(CurrSetupArea == &quot;xVibeFFmpegCategory3&quot;, CreateArray(&quot;action.runHardwareTest&quot;, &quot;action.exportHardwareReport&quot;), If(CurrSetupArea == &quot;xVibeFFmpegCategory4&quot;, CreateArray(&quot;status.mimVersion&quot;, &quot;status.platform&quot;, &quot;status.last.state&quot;, &quot;status.last.backend&quot;, &quot;status.last.encoder&quot;, &quot;status.last.hardwareDecode&quot;, &quot;health.launcher&quot;, &quot;health.runtime&quot;, &quot;capabilities.vaapi.usable&quot;, &quot;capabilities.qsv.usable&quot;, &quot;capabilities.nvenc.usable&quot;, &quot;capabilities.amf.usable&quot;, &quot;capabilities.d3d12va.usable&quot;, &quot;capabilities.software.usable&quot;, &quot;captionSideChannel.status&quot;), If(CurrSetupArea == &quot;xVibeFFmpegCategory5&quot;, CreateArray(&quot;logging.enabled&quot;, &quot;logging.level&quot;, &quot;ini.path&quot;, &quot;ini.lastModified&quot;, &quot;action.reload&quot;, &quot;action.repairLauncher&quot;, &quot;action.restoreDefaultIni&quot;, &quot;action.last&quot;), CreateArray(&quot;general.enabled&quot;, &quot;filters.deinterlace&quot;, &quot;audio.mode&quot;, &quot;closed_captions.preserve_a53cc&quot;, &quot;seek.fast_seek&quot;, &quot;caption_side_channel.enabled&quot;, &quot;caption_side_channel.bind_address&quot;, &quot;caption_side_channel.api_port&quot;))))))" Sym="VIBEFFMPEG-CONFIG-SETTINGS">
+            <Action Name="If((CurrSetupArea == null || CurrSetupArea == &quot;xVibeFFmpegCategory1&quot;), CreateArray(&quot;general.enabled&quot;, &quot;filters.deinterlace&quot;, &quot;audio.mode&quot;, &quot;stdinctrl.runtime_bitrate_control&quot;, &quot;closed_captions.preserve_a53cc&quot;, &quot;seek.fast_seek&quot;, &quot;caption_side_channel.enabled&quot;, &quot;caption_side_channel.bind_address&quot;, &quot;caption_side_channel.api_port&quot;), If(CurrSetupArea == &quot;xVibeFFmpegCategory2&quot;, CreateArray(&quot;hardware.backend&quot;, &quot;hardware.hardware_decode&quot;, &quot;hardware.active_file_hardware_decode&quot;, &quot;capabilities.selectedBackend&quot;, &quot;capabilities.ffmpegVersion&quot;), If(CurrSetupArea == &quot;xVibeFFmpegCategory3&quot;, CreateArray(&quot;action.runBitrateTest&quot;, &quot;runtimeBitrateTest.status&quot;, &quot;runtimeBitrateTest.reportPath&quot;, &quot;action.runHardwareTest&quot;, &quot;action.exportHardwareReport&quot;), If(CurrSetupArea == &quot;xVibeFFmpegCategory4&quot;, CreateArray(&quot;status.mimVersion&quot;, &quot;status.platform&quot;, &quot;status.last.state&quot;, &quot;status.last.backend&quot;, &quot;status.last.encoder&quot;, &quot;status.last.hardwareDecode&quot;, &quot;health.launcher&quot;, &quot;health.runtime&quot;, &quot;capabilities.vaapi.usable&quot;, &quot;capabilities.qsv.usable&quot;, &quot;capabilities.nvenc.usable&quot;, &quot;capabilities.amf.usable&quot;, &quot;capabilities.d3d12va.usable&quot;, &quot;capabilities.software.usable&quot;, &quot;captionSideChannel.status&quot;), If(CurrSetupArea == &quot;xVibeFFmpegCategory5&quot;, CreateArray(&quot;logging.enabled&quot;, &quot;logging.level&quot;, &quot;ini.path&quot;, &quot;ini.lastModified&quot;, &quot;action.reload&quot;, &quot;action.repairLauncher&quot;, &quot;action.restoreDefaultIni&quot;, &quot;action.last&quot;), CreateArray(&quot;general.enabled&quot;, &quot;filters.deinterlace&quot;, &quot;audio.mode&quot;, &quot;stdinctrl.runtime_bitrate_control&quot;, &quot;closed_captions.preserve_a53cc&quot;, &quot;seek.fast_seek&quot;, &quot;caption_side_channel.enabled&quot;, &quot;caption_side_channel.bind_address&quot;, &quot;caption_side_channel.api_port&quot;))))))" Sym="VIBEFFMPEG-CONFIG-SETTINGS">
              <Table Name="PluginSettings" Sym="VIBEFFMPEG-CONFIG-004">
               <AnchorPointX>0.0</AnchorPointX>
               <AnchorPointY>0.0</AnchorPointY>
@@ -3750,7 +3847,7 @@
                 </Shape>
                </Panel>
               </TableComponent>
-              <Conditional Name="Size(If((CurrSetupArea == null || CurrSetupArea == &quot;xVibeFFmpegCategory1&quot;), CreateArray(&quot;general.enabled&quot;, &quot;filters.deinterlace&quot;, &quot;audio.mode&quot;, &quot;closed_captions.preserve_a53cc&quot;, &quot;seek.fast_seek&quot;, &quot;caption_side_channel.enabled&quot;, &quot;caption_side_channel.bind_address&quot;, &quot;caption_side_channel.api_port&quot;), If(CurrSetupArea == &quot;xVibeFFmpegCategory2&quot;, CreateArray(&quot;hardware.backend&quot;, &quot;hardware.hardware_decode&quot;, &quot;hardware.active_file_hardware_decode&quot;, &quot;capabilities.selectedBackend&quot;, &quot;capabilities.ffmpegVersion&quot;), If(CurrSetupArea == &quot;xVibeFFmpegCategory3&quot;, CreateArray(&quot;action.runHardwareTest&quot;, &quot;action.exportHardwareReport&quot;), If(CurrSetupArea == &quot;xVibeFFmpegCategory4&quot;, CreateArray(&quot;status.mimVersion&quot;, &quot;status.platform&quot;, &quot;status.last.state&quot;, &quot;status.last.backend&quot;, &quot;status.last.encoder&quot;, &quot;status.last.hardwareDecode&quot;, &quot;health.launcher&quot;, &quot;health.runtime&quot;, &quot;capabilities.vaapi.usable&quot;, &quot;capabilities.qsv.usable&quot;, &quot;capabilities.nvenc.usable&quot;, &quot;capabilities.amf.usable&quot;, &quot;capabilities.d3d12va.usable&quot;, &quot;capabilities.software.usable&quot;, &quot;captionSideChannel.status&quot;), If(CurrSetupArea == &quot;xVibeFFmpegCategory5&quot;, CreateArray(&quot;logging.enabled&quot;, &quot;logging.level&quot;, &quot;ini.path&quot;, &quot;ini.lastModified&quot;, &quot;action.reload&quot;, &quot;action.repairLauncher&quot;, &quot;action.restoreDefaultIni&quot;, &quot;action.last&quot;), CreateArray(&quot;general.enabled&quot;, &quot;filters.deinterlace&quot;, &quot;audio.mode&quot;, &quot;closed_captions.preserve_a53cc&quot;, &quot;seek.fast_seek&quot;, &quot;caption_side_channel.enabled&quot;, &quot;caption_side_channel.bind_address&quot;, &quot;caption_side_channel.api_port&quot;))))))) &gt; 5" Sym="VIBEFFMPEG-CONFIG-203">
+              <Conditional Name="Size(If((CurrSetupArea == null || CurrSetupArea == &quot;xVibeFFmpegCategory1&quot;), CreateArray(&quot;general.enabled&quot;, &quot;filters.deinterlace&quot;, &quot;audio.mode&quot;, &quot;stdinctrl.runtime_bitrate_control&quot;, &quot;closed_captions.preserve_a53cc&quot;, &quot;seek.fast_seek&quot;, &quot;caption_side_channel.enabled&quot;, &quot;caption_side_channel.bind_address&quot;, &quot;caption_side_channel.api_port&quot;), If(CurrSetupArea == &quot;xVibeFFmpegCategory2&quot;, CreateArray(&quot;hardware.backend&quot;, &quot;hardware.hardware_decode&quot;, &quot;hardware.active_file_hardware_decode&quot;, &quot;capabilities.selectedBackend&quot;, &quot;capabilities.ffmpegVersion&quot;), If(CurrSetupArea == &quot;xVibeFFmpegCategory3&quot;, CreateArray(&quot;action.runBitrateTest&quot;, &quot;runtimeBitrateTest.status&quot;, &quot;runtimeBitrateTest.reportPath&quot;, &quot;action.runHardwareTest&quot;, &quot;action.exportHardwareReport&quot;), If(CurrSetupArea == &quot;xVibeFFmpegCategory4&quot;, CreateArray(&quot;status.mimVersion&quot;, &quot;status.platform&quot;, &quot;status.last.state&quot;, &quot;status.last.backend&quot;, &quot;status.last.encoder&quot;, &quot;status.last.hardwareDecode&quot;, &quot;health.launcher&quot;, &quot;health.runtime&quot;, &quot;capabilities.vaapi.usable&quot;, &quot;capabilities.qsv.usable&quot;, &quot;capabilities.nvenc.usable&quot;, &quot;capabilities.amf.usable&quot;, &quot;capabilities.d3d12va.usable&quot;, &quot;capabilities.software.usable&quot;, &quot;captionSideChannel.status&quot;), If(CurrSetupArea == &quot;xVibeFFmpegCategory5&quot;, CreateArray(&quot;logging.enabled&quot;, &quot;logging.level&quot;, &quot;ini.path&quot;, &quot;ini.lastModified&quot;, &quot;action.reload&quot;, &quot;action.repairLauncher&quot;, &quot;action.restoreDefaultIni&quot;, &quot;action.last&quot;), CreateArray(&quot;general.enabled&quot;, &quot;filters.deinterlace&quot;, &quot;audio.mode&quot;, &quot;stdinctrl.runtime_bitrate_control&quot;, &quot;closed_captions.preserve_a53cc&quot;, &quot;seek.fast_seek&quot;, &quot;caption_side_channel.enabled&quot;, &quot;caption_side_channel.bind_address&quot;, &quot;caption_side_channel.api_port&quot;))))))) &gt; 5" Sym="VIBEFFMPEG-CONFIG-203">
                <Panel ID="1600001" Name="TableVPagination w=0.03" Sym="VIBEFFMPEG-CONFIG-PAGINATION-001">
                 <AnchorX>1.0</AnchorX>
                 <AnchorY>0.5</AnchorY>

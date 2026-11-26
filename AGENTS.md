@@ -1,5 +1,13 @@
 # Agent instructions
 
+## Superseding stock-server rule (2026-11-09)
+
+`.232` now uses official stock Core. Older non-stock232/Core exceptions below
+no longer apply. Preserve Sage.jar, bundled native Core and original FFmpeg;
+install this plugin/runtime only through SageTV's plugin manager. Client fixes
+remain first priority, with proven plugin-owned faults fixed here. Container
+OS/loader integration may change without replacing protected stock bytes.
+
 ## Task fix and server-boundary policy
 
 Apply this policy to every task workflow, including dependency fixes across

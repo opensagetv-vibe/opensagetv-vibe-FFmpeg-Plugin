@@ -1,5 +1,335 @@
 # Changelog
 
+## 0.1.36 release preparation - 2026-11-26
+
+- User authorizes beta publication of the qualified output/hardware controls,
+  shared buffer-only adaptation, completed-file reserve and recovery work below.
+- Full stock-contract Java/service/HTTP/launcher and deterministic package gates
+  pass; preserve per-platform/device limits and optional negotiated fallback.
+
+## HLS-BUFFER-001 negotiated forward reserve (unreleased development)
+
+- Advertise optional hlsBufferRevision1. A client may request bufferAheadMs
+  from0..20000 for responsive HLS; only an independently confirmed completed
+  source receives the bounded initial production burst. Steady pacing,
+  live/unknown writers and old callers remain unchanged.
+- Preserve the reserve intent through owned seek and quality replacement.
+  No shared INI, stock Core, native encoder or launcher change. Java contract
+  tests pass; normal-manager installation on232 verifies99entries and20stock
+  files. Android515609fb passes four HLS delegates/eight seeks, Direct control,
+  remote/rapid-input recovery and HDMI with reserve up to19.806s. Its old0|6
+  confirmation was corrected client-side. All210prefs/CC/power restore; Pro
+  deployment remains user-deferred. Compact HLS-BUFFER-001/HLS-006 results own
+  exact scope; no175/Core/publication or unrelated matrix replay.
+
+## SETTINGS-005 per-session hardware backend (unreleased development)
+
+- Add negotiated hardwareBackendRevision1 with validated immutable backend
+  intent; confirm actual hardware/backend/encoder and retain it through seek/
+  quality. Auto/old callers remain unchanged. Copy/software conflicts and
+  unsupported explicit choices refuse; never edit shared INI or stock Core.
+- Full tests,12actual QSV/VAAPI Legacy/responsive output/seek/quality rows,
+  normal-manager232 install and Non-Pro4routes/8seeks/2FF/2negative controls
+  with independent HDMI pass.210prefs/CC/power restored, final activity/provider0,
+  protected stock20/INI/engines unchanged. Compact SETTINGS-005 results retain
+  scope. No Pro/175/Windows/vendor-wide certification or publication.
+
+## FIXED-002 recording-seek runtime correction (unreleased development)
+
+- Deliver the optional MIM H.264 VAAPI caption-repacking correction through
+  normal SageTV plugin manager0.1.36.20261126.111501. Java99class/resource
+  entries remain unchanged; wrapper349452c7 is verified after an independently
+  idle restart, with all20stock files unchanged. No Core/original FFmpeg or
+  qualified engine replacement, shared INI edit or175 update.
+- Reported-source Non-Pro11routes/33seeks plus actual FF pass; independent HLS
+  caption/motion/audio and IJK motion/audio HDMI verify output. All210prefs/CC/
+  power restored, final activity/provider0. No Pro/Windows physical, instant-seek
+  or native Web VAAPI claim/publication. Compact FIXED-002 results retain scope;
+  reviewed raw retired recoverably, not inferred from earlier fixture tests.
+
+## MIM-PROBE-001 file-TS discovery (unreleased development)
+
+- Integrate the bounded runtime correction for delayed MPEG-2 sequence headers
+  through the normal SageTV plugin manager. The former500ms discovery limit
+  misreported90kTBR and failed VAAPI; a5s file-TS floor discovers actual cadence.
+  Preserve Copy/stdin/non-TS, larger/auto budgets, qualified engines and live INI.
+- Stock232 developer install0.1.36.20261126.013741 matches99tested class/resource
+  entries and wrappercc794701; all20protected stock files match. Exact reported
+  recording passes old/current API requests with real VAAPI/QSV/software output;
+  13policy/output/isolation/restart/negative rows pass. Android115/92df378a
+  completes18Non-Pro routes and affected Source6 policy/failure/fallback/UI/HLS
+  handoff gates;210prefs restored and final sessions/activity0. No publication,
+  Windows runtime or every-vendor claim; original-stock routing stays deferred.
+
+## MIM-OUTPUT-001 owned output options (unreleased development)
+
+- Add opt-in output/policy revisions, validated immutable per-source encoding
+  options, Source audio and actual bounded ffprobe output. Old omitted requests
+  retain their existing contract; unsupported containers/policies fail explicitly.
+- Enforce exact Software/Hardware Only attribution without INI/Core changes;
+  preserve options across seek/quality replacement. Actual232 software/QSV,
+  concurrent isolation/seek/Source AC3/HEVC/legacy-negative gates pass after normal
+  manager install. First startup502 remains unexplained, not a proven fix.
+- Keep global legacy launcher behavior by user decision; per-client original-
+  stock routing is MIM-STOCK-001. Android affected software/QSV/HEVC/status/
+  native-Pull gates pass on final115/05697001 with203preferences restored.
+  Native regression/independent HEVC-segment tests pass; initial transient
+  observations remain unproven. No publication or all-device claim.
+
+## ADAPT-001 recovery stability follow-up (development)
+
+- Correct automatic recovery being held forever by healthy segment-sized
+  buffer refill oscillation. Require ten high-reserve observations with bounded
+  cumulative loss, preserving cooldowns, range and finite handoff budget.
+- Real Chrome failed-before/refill-trace regression and corrected4000→3000→3750
+  handoffs pass on stock232 Java020729. Sustained drain stays ineligible for
+  recovery; no client/Core/native-runtime rewrite or publication.
+- Correct the8s recovery floor being unreachable on intentionally paced6s
+  responsive HLS. Java023018 retains ten samples/cumulative stability but uses
+  a5s floor; below5s cannot recover. Actual Non-Pro Media3 down/up/seek/pause/
+  resume and restoration pass with the unchanged APK/producer burst.
+
+## Unreleased development0.1.36 - Shared MIM buffer controller
+
+- Own a single buffer-only adaptation policy used by Android Direct/HLS and
+  the optional Web bridge. Limits arrive at source start; reports contain
+  reserve and playback eligibility, never measured bandwidth.
+- Bound targets, sampling, cooldown/recovery, stale report handling and handoff
+  attempts. Verify published output independently; missing reports hold rate.
+- Reuse existing runtime control and actual-frame handoff. No stock Core or
+  native FFmpeg/MIM change is required for this Java control-layer feature.
+- Add exact-session leased test override/clear through MCP/public plugin
+  configuration. Preserve startup range, readiness and renderer/encoder guards;
+  distinguish accepted targets from observed and independently measured output.
+- Correct readiness for fully fetched healthy output: actual recent segment
+  publication and playable reserve qualify; an additional unfetched reserve is
+  not required. Stale output and near-tail playback still hold the bitrate.
+
+## Unreleased development0.1.35 - Windows forced-stop caption custody
+
+- Pair MIM0.4.20's OS-owned Windows caption marker. A dead ordinary stock
+  encoder must not consume the slot needed for Direct seek handoff.
+- Preserve0.1.34's optional Java8 owned-start API and unchanged native launcher.
+  Focused public API/ownership guards and deterministic packages pass; stock
+  files and saved INI remain protected. MIM-WIN-001 now completes its scoped
+  stock185/Non-Pro/browser qualification and restoration; retain Windows GPU/
+  in-place-rate/Portmaster limitations, not an all-platform certification.
+
+## Unreleased development0.1.34 - Windows185/Java8 ownership
+
+- Pair MIM0.4.19's Windows raw-input throughput and explicit D3D11 QSV fix.
+- Add optional public Process-owned start registration for the verified
+  kill-on-close Windows native launcher. Java8 stop accepts only those exact
+  registered Processes; Java9 public ProcessHandle behavior is unchanged.
+- Stock DVD streams use the registered launcher on Windows. Keep arbitrary
+  processes, Core, Java, stock FFmpeg and existing INI unchanged. Actual Java8
+  blocked-writer/tree cleanup37ms and unrelated-process refusal tests pass;
+  installed consumers remain MIM-WIN-001 acceptance, not a publication claim.
+
+## Unreleased development0.1.32 - MIM-QSV-001 dependency
+
+- Pair MIM0.4.17's caption-safe Linux system-memory QSV encode queue.
+  Preserve the four qualified engines, authoritative INI, optional adaptive
+  contract and stock Core/FFmpeg. Internal0.1.31 staging is superseded by
+  version-consistent0.1.32 packages; no public version was changed.
+- Stock compile/source contracts, regression tests and deterministic packages
+  pass. Actual Non-Pro/stock232 acceptance remains in the owning runtime task.
+
+## Unreleased development0.1.30 — optional Linux-QSV control
+
+- Shared Process-owned runtime bitrate protocol, absolute request identities,
+  reset-plus-progress confirmation, ceiling/cooldown and ambiguous-result hold.
+  Explicit site/client opt-ins; unsupported paths keep ordinary playback.
+- Settings/STVI synthetic bitrate test measures actual packets/clock/decode,
+  protects activity, uses a copied INI and saves a compact server report.
+  Correct inherited diagnostic VPP doubling; production deinterlacing unchanged.
+- Normal-manager stock232 diagnostic PASS67.548s with6091.888/2016.281/
+  2473.861kbps, same QSV process/clean60fps decode; active playback refusal409.
+  Generated three-button STVI dashboard stays within its viewport.
+- Both platform packages/builds and focused tests pass. Shared Web Chromium/
+  WebKit and Non-Pro supported-HLS in-place consumers now qualify the eligible
+  Linux-QSV file profile. Original Auto/sitefalse restored; known classic-QSV
+  rc139, Windows/NVENC/physical WAN/audio remain unqualified. No publication.
+
+## Unreleased development0.1.28 — responsive Android HLS
+
+- Negotiate an explicit responsive Transcode profile with MIM0.4.15: one-second
+  subtitle-preserving segments, backend-scoped QSV IDRs, proven-completed-only
+  six-second read burst with steady pacing, bounded faster readiness and
+  accepted-policy/startup diagnostics. Seek/quality preserve profile ownership.
+- Legacy callers, Copy, growing/unknown pacing, INI and stock Core unchanged.
+  Local CPU comparison2,525→472ms for the first completed segment; no GPU or
+  device certification implied. Local packages only; no install/publication.
+
+## Task reconciliation2026-11-20 (documentation only)
+
+- Close stale Linux MIM-STDIN-001/REMOTE-001/REMOTE-003/STOCK-DVD-001 checklist
+  entries using already-recorded provider/consumer/physical evidence. Preserve
+  exact scope, Windows/Android-WAN deferrals and original failure limits.
+  No code, package, installed bytes or public release changed.
+
+## Unreleased development0.1.27
+
+- Pair MIM0.4.14 bounded Linux raw-media duplex forwarding, fixing a proven
+  child-stdin/stderr backpressure cycle without Core, engine or INI changes.
+  Shared lifecycle protocol1 and existing Direct/preview APIs are unchanged.
+  Normal-manager commissioning and affected physical EOF gates pending.
+
+## Unreleased development0.1.26
+
+- Expose optional versioned OwnedProcessControl protocol1 over the existing
+  DVD process-tree stop utility, for other plugins' actual owned Process
+  references. No PID/command endpoint, duplicated kill implementation or Core
+  change. Public ProcessHandle requires Java9+; Java8 linkage remains valid.
+- Independent blocked-duplex/unrelated-process tests and the existing stock-only
+  DVD service finite/full-queue/both-blocked-pipes close tests pass. Web WEB097
+  owns consumer integration and field qualification. MIM0.4.13, FFmpeg/probe
+  engines, INI and existing Direct/preview APIs are unchanged. Not published.
+
+## Unreleased development0.1.25
+
+- Pair MIM0.4.13 raw-stdin EOF preservation: Linux no longer discards buffered
+  video/PES bytes on POLLIN|POLLHUP. Required by genuine one-picture Web DVD
+  gate; runtime before/after count/hash regression is proven. Java/preview/
+  Direct API and FFmpeg/probe engines unchanged. Installation/affected physical
+  gates pending, no publication or Core/INI change implied.
+
+## Unreleased development0.1.24
+
+- Add optional bounded source-owned scrub preview requests through the existing
+  MIM thumbnail passthrough, not another playback stream. One finite job,
+  source/tool/INI identity, strict completed writer, per-load cancellation,
+  memory/byte/entry bounds and explicit bucket timestamps. Preview-only leases
+  let Web reuse this service without allocating a Direct producer.
+- Windows/non-passthrough/unisolated policies remain unavailable. Local Java8,
+  job/cache/binary HTTP/provider regression tests pass; manager/actual image
+  and Android/Web consumer qualification are still in progress. Not released.
+
+## Unreleased development0.1.23
+
+- Reuse bounded duration-probe results only for publicly confirmed completed
+  sources with unchanged source and probe-executable identity/size/mtime.
+  Unknown/live/identity-less input still probes; mutation, failure, tool change
+  and lifecycle invalidation cannot reuse stale bounds.32-entry memory LRU,
+  no background work or shared-INI/Core/engine changes.
+- Add optional sourceProbeCacheRevision1 and a closed per-session
+  durationProbeCache disposition for affected seek qualification. Java8 owner/
+  HTTP/cache mutation/LRU/concurrent-I/O tests pass; normal-manager candidate
+  installation and exact-source device checks still pending. Stock232 remains22.
+- Validate the runtime Java version constant against both release metadata
+  version fields so a packaged update cannot silently report the prior version.
+
+## Unreleased development0.1.22
+
+- Negotiate session-only initial bitrate/ceiling and gradual recovery with one
+  temporary candidate. Recovery is explicit, at most25%, never above the
+  original request, and shares the existing cooldown/two-attempt budget.
+  Legacy reduction-only requests/defaults and stock Core/INI/engines unchanged.
+- Require exact producer PID for execution attribution. Same-input overlapping
+  handoffs must not inherit each other's hardware claims; unavailable PID
+  evidence stays unknown, including older Java/MIM without that witness.
+- Normal manager22/API and exact independent two-producer VAAPI decode/filter/
+  encode gates pass. Android115c90 actual Non-Pro25/stock232 Media3/legacy
+  measured down/up and GSY manual recovery/control/trace rows pass to recorded
+  scopes; remaining negative/fallback/settled-caption acceptance is tracked in
+  Android EXPERIENCE-002. Not a public release or all-device/WAN certification.
+
+## Unreleased development0.1.21
+
+- Correct a stale MiniClient active-file hint only when stock SageTV's public
+  IsFileCurrentlyRecording API independently proves the source completed. A
+  completed Direct seek/handoff must not silently render frame zero behind a
+  nonzero reported clock. Unknown/actual writers keep existing follow policy.
+- Refuse optional adaptive handoff on real/unknown growing sources until its
+  nonzero content position is qualified; preserve original playback/budget.
+  Normal playback and legacy callers remain available. Focused writer/HTTP/
+  lifecycle/deterministic packages, manager install/eight API gates pass. Actual
+  Non-Pro115 completed-file handoff/content/captions/seek/pause passes Media3,
+  legacy and both GSY delegates. Broader network/failure qualification remains
+  open; not released. Stock20/INI/engines unchanged.
+
+## Unreleased development0.1.20
+
+- Add optional atomic Direct quality-seek revision1: explicit user seek
+  resolves pending, committed or expired old/candidate lineage without client
+  token guessing or replay. Exact foreign/stale/STOP guards preserve ownership.
+  Required by Android's new optional handoff consumer; legacy callers unchanged.
+- Service/HTTP/build/package and normal-manager stock232 deployment plus seven
+  actual API gates pass (synthetic ACK, not rendered proof). Android physical
+  acceptance remains pending. Stock Core/FFmpeg/MIM engines
+  and shared INI unchanged; not a public release.
+
+## Unreleased development0.1.19
+
+- Add explicitly negotiated Direct quality handoff revision1: one temporary
+  replacement,45s deadline and presented-commit/abort. Preparation keeps the
+  original producer alive; timeout/failure cancels only the candidate. Exact
+  source STOP/seek supersession, finite admission and idempotent commit preserve
+  ownership. Legacy quality revision1 remains compatible. Consumer/physical
+  qualification and publication remain pending; MIM engines/Core unchanged.
+
+## Unreleased development0.1.18
+
+- Add optional sessionQualityRevision1 to the existing Direct service:
+  source-owned session-only bitrate reductions, no shared INI/default edits,
+  Copy/upshift/stale-token refusal, serialized replacement,60s cooldown and
+  two-attempt per-load budget. Ordinary seek preserves the effective quality.
+  Existing starts/restarts retain their defaults. Java/service/HTTP gates pass;
+  new stock-server/Android physical qualification remains pending.
+- Use one encoder for adaptive quality changes: confirm old producer exit
+  before replacement, retain its published media, and refuse another encoder
+  if stopping cannot be confirmed. No multi-rendition ladder or upshift claim.
+- MIM0.4.12 engines, stock Core/FFmpeg, caption ownership and DVD processing
+  stay unchanged. No publication or cross-platform qualification is claimed.
+
+## Unreleased development0.1.17
+
+- Publish bounded actual DVD SPU inventory for Copy/Transcode. Per-job probe/
+  logging snapshots preserve post-seek sparse subtitles without shared-INI or
+  MIM engine changes. Direct stderr avoids a Linux raw-input mirror wait; public
+  owned ProcessHandle shutdown fixes the reproduced Java11 stdin-close deadlock.
+  Stock232/Non-Pro PAL/sparse/lifecycle/fallback gates pass; Windows deferred.
+
+## Unreleased development0.1.13
+
+- Close plugin-owned DVD transform children on Standard Disable/destroy and
+  serialize new session creation against shutdown. Reject stopped providers;
+  keep process/INI/GPU ownership here, not in Android or Client Extension.
+- Expose only an exact-session child-failure action for authenticated bounded
+  MCP commissioning, never a caller-supplied PID/path/executable. Real full-GPU
+  child termination on stock232 falls back to Native with advancing A/V/HDMI.
+- Stock-JAR tests, stopped/open guards and deterministic packages pass.
+- Linux stock232/Non-Pro Copy/full_gpu Transcode subtitles/controls, actual
+  child failure/Standard Disable and old-client Native fallback pass to compact
+  VCE-003 scope; settings/stock hashes/no-orphan checks pass. Windows deferred.
+
+## Unreleased development0.1.11
+
+- Preserve authored DVD subpicture ordinals by mapping optional physical SPU
+  IDs in order, not FFmpeg discovery order. Canonical English0x20/Spanish0x21
+  discovery is reversed; the local probe verifies corrected output ordering.
+  Physical0.1.11 qualification remains pending; engines/Core are unchanged.
+
+- Extract finite DVD transforms into a stock-only service with a thin optional
+  legacy Core-SPI adapter. Keep one FFmpeg-owned process/INI/hardware policy.
+- Bound full-output-queue cancellation and distinguish nonzero encoder exit
+  from successful EOF. Exit7 regression first failed, then passes after the
+  correction. Stock232 manager installation and scoped transformed playback
+  pass; complete lifecycle/fallback and Windows qualification remain open.
+
+- STOCK-CEA-001 candidate: stop checking FUSE-backed claim files for every
+  caption datagram. Discover initial claims immediately, recheck active claims
+  within200ms using a monotonic clock, preserve synchronous teardown and bounded
+  record/socket buffers. Fresh-claim, release and timer-wrap tests pass. Real
+  manager0.1.8/stock232 restart, independent2s/500ms HDMI captions, seek/pause
+  recovery and0 drops across161117 received datagrams qualify the correction.
+
+- Pair MIM0.4.12's bounded stream-mapping fix; unchanged FFmpeg engines and
+  installed plugin IDs/settings. Local stock232 qualification candidate only.
+- Real manager updates Standard/STVI0.1.7 and MIM0.4.12, with guarded restart,
+  unchanged stock hashes/settings, actual Non-Pro Fixed/DVB fallback and Direct
+  controls plus HDMI verification. Public0.1.6 remains unchanged.
+
 ## 0.1.6 - 2026-10-21
 
 - Published ten independently verified public assets at e07a7b9 with green

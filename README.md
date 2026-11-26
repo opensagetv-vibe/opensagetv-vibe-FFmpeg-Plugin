@@ -1,6 +1,36 @@
 # OpenSageTV Vibe FFmpeg Plugin
 
+Development SETTINGS-005 adds optional Direct `hardwareBackendRevision=1`,
+advertised only with a supporting MIM runtime. Immutable `hardwareBackend`
+requests preserve Auto/legacy defaults or pin one server accelerator without
+editing shared INI. The service verifies the exact observed hardware backend
+and encoder before accepting a pinned stream; seek and quality retain the same
+options. Unsupported explicit choices refuse, never silently become another
+backend or original Pull. Copy/Software-only conflicting API requests reject.
+Android and Web use consistent accelerator names; their transports and Web's
+existing explicit Allow Fallback control remain distinct.
+
+Development0.1.36 shares one buffer-only adjustment controller between Android
+and Web. Clients send startup min/max and report their buffer; encoder ownership,
+readiness, cooldowns and handoff limits stay enforced. Optional MCP commissioning
+can override one adjusted session within its range for 15..300 seconds. It holds
+automatic decisions until clear/expiry and emits a target once through the
+existing rate/handoff path. Accepted override, observed encoder target and
+measured output/playback are separate evidence. Nothing changes shared INI or
+stock Sage.jar/FFmpeg; missing capability retains ordinary Fixed playback.
+
 Repository: https://github.com/opensagetv-vibe/opensagetv-vibe-FFmpeg-Plugin
+
+Development MIM-OUTPUT-001 adds optional Direct outputSettingsRevision1 and
+native encoderPolicyRevision1. A request may select server default, prefer
+hardware, software only or hardware only, plus supported codec/size/FPS/audio
+options. Explicit unavailable hardware never silently becomes software. Options
+are session-owned, survive seek/quality replacement and do not edit the live
+INI. Source audio is detected/validated; requested targets remain separate from
+observed output. Current delivery is MPEG-TS segments; MKV/DVD refuse explicitly.
+Per-client original-stock routing is deferred MIM-STOCK-001: existing legacy
+launcher clients retain behavior, not a global engine switch. See TASKS.md and
+artifacts/results/MIM-OUTPUT-001/RESULT.md for scoped qualification/limitations.
 
 The repository was renamed; installed SageTVFFmpegPlugin IDs, JAR names and
 configuration paths are unchanged. Existing releases remain available.
@@ -29,6 +59,52 @@ User-facing plugin name: **OpenSageTV Vibe FFmpeg Plugin**.
   SPI and continues to use the same Standard plugin normally.
 
 ## Current implementation status
+
+Development0.1.35 pairs MIM0.4.20's Windows forced-stop caption lease and retains
+MIM0.4.19's pipe/device corrections plus
+optional Java8 Windows process ownership. The shared API registers only an
+exact Process launched through the byte-verified native kill-on-close Job
+launcher; unrelated Processes are refused. Java9 public-handle behavior is
+unchanged. Stock Java/Core/FFmpeg and existing INI are preserved. See runtime
+MIM-WIN-001 for actual Windows185 acceptance; no publication is implied.
+
+Development0.1.32 pairs MIM0.4.17's ordinary Fixed Linux H.264 QSV
+caption-safe encode queue. It corrects the reproduced Intel async-worker
+crash without disabling captions/GPU or changing requested bitrate/VBV.
+Normal-manager stock232 install and Non-Pro Media3/Legacy Exo repeated-seek,
+pause/resume/EOF gates pass. Authoritative INI, engines and stock20 remain
+unchanged; Auto remains the default preference. See sibling runtime
+`artifacts/results/MIM-QSV-001/RESULT.md`; not universal vendor certification.
+
+Development0.1.30 / MIM0.4.16 adds optional Linux-QSV same-process bitrate
+control. Enable the plugin's **Allow In-Place Bitrate Control** and the client's
+separate session preference; both default off. Unsupported encoders/platforms
+keep existing playback/handoff. No rendition ladder or stock Core change.
+See [the shared contract](docs/DIRECT_SESSION_CONTRACT.md).
+
+**Hardware Test → BITRATE TEST** (also in generic plugin configuration) runs
+a bounded synthetic encoder test and saves measured results under the plugin's
+`reports/Vibe-Bitrate-Test-latest.json`. Actual stock232 test passed:
+6.09→2.02→2.47Mbps for6→2→2.5Mbps targets, same process/clean60fps decode.
+It refuses active playback/recordings/unknown activity and preserves user INI.
+This tests software-source/QSV-encode only; Windows/NVENC are not qualified.
+Web/Android use the same optional diagnostic rather than duplicating it.
+
+Development0.1.28 pairs MIM0.4.15 for Android's optional responsive HLS
+profile. New capability negotiation protects older wrappers/callers; only
+explicit HLS Transcode changes segment cadence, bounded completed-source
+startup read-ahead and QSV IDR handling. Existing Direct/Copy/Fixed, subtitles,
+INI and stock Core remain unchanged. See [the contract](docs/DIRECT_SESSION_CONTRACT.md).
+Candidate packages are local, not installed/published or physically certified.
+
+The later HLS-BUFFER-001 development contract optionally negotiates a bounded
+completed-file forward reserve (`hlsBufferRevision=1`, `bufferAheadMs`0..20000).
+Old callers keep the six-second burst; live/unknown writers and steady pacing
+are unchanged. The Java-only update is manager-installed on stock232 and
+qualified with Android Non-Pro HLS delegates; reserve reaches19.806s against20s.
+See `artifacts/results/HLS-BUFFER-001/RESULT.md` for exact scope and the shared
+contract for request/response rules. No Core, native wrapper, INI or175 change;
+Pro deployment remains user-deferred, and this is not a published release.
 
 Implemented and commissioned:
 
@@ -90,6 +166,105 @@ shows the exact timestamped path in **Exported Hardware Report**. The stable
 user explicitly exports another completed result.
 
 ## Build
+
+### Development bounded Direct handoff (0.1.23; stock232 qualification)
+
+Candidate23 also advertises `mimDirect.sourceProbeCacheRevision=1`. Nonzero
+Direct starts/seeks may reuse a duration only when the public server API says
+the source is not recording and both source and ffprobe identities remain
+unchanged (regular file, file key, size, modification and creation times).
+The in-memory cache holds at most32 entries. Unknown/live writers, missing
+identity and failed probes retain the original bounded probe path; mutation
+during a probe cannot establish a seek bound. There is no disk cache, TTL,
+background scan or change to encoder/segment/caption policy. Session status
+reports only the closed `durationProbeCache` disposition, not source identity.
+Local mutation, replacement, LRU and concurrent lifecycle tests pass.23 is
+normal-manager loaded on stock Linux232; real API reuse/clamp and affected
+Non-Pro Media3/legacy seek/pause/content/caption checks pass. This is not a
+Windows/all-device qualification or public release. See
+[the shared contract](docs/DIRECT_SESSION_CONTRACT.md).
+
+Latest user clarification allows temporary overlap, not a permanent rendition
+ladder. The existing FFmpeg/MIM session owner advertises
+`mimDirect.qualityHandoffRevision=1` separately from legacy quality revision1.
+Only an opting-in client uses these POST operations:
+
+- `qualityStartRevision=1` accepts `videoKbps=250..50000` on ordinary start;
+  omitted retains6000. This initial request becomes the immutable ceiling.
+  `qualityRecoveryRevision=1` permits a higher target only on handoff prepare
+  with `recovery=true`, at most25% above current and never above that ceiling.
+  Both directions share60s cooldown/two total attempts; seek preserves budget
+  and ceiling. Legacy `/quality` remains strictly reduction-only. This is not
+  a certified WAN adaptation result. GPU execution requires exact wrapper PID;
+  same-input/latest-job matching or missing PID is not hardware evidence.
+
+- `/v1/direct/quality/prepare?token=<old>&startMs=<absolute-ms>&videoKbps=<lower>`
+  prepares a replacement and returns its ordinary session/caption/media handles.
+  The original remains active. At most one pending handoff across the service,
+ 45s including startup, within the existing four-session admission limit.
+- `/v1/direct/quality/commit?token=<old>&replacementToken=<new>&presentedMs=<absolute-ms>`
+  confirms the exact replacement was presented. Only then retire the old
+  producer, keeping its published files for the normal15s grace. Exact commit
+  retries are idempotent. Playlist readiness alone is not presentation.
+- `/v1/direct/quality/abort?token=<old>&replacementToken=<new>` cancels only the
+  still-pending candidate. Expiry/preparation failure also preserves original.
+  User seek/STOP supersedes a pending handoff; stale acknowledgements cannot
+  retire a new source. Failed attempts consume the existing cooldown/budget.
+- Optional `qualitySeekRevision=1` (20+) adds POST
+  `/v1/direct/quality/seek?token=<old>&replacementToken=<new>&startMs=<absolute-ms>`.
+  Resolve pending/committed/expired exact lineage atomically for a user seek;
+  never guess which token won or replay an ordered seek after ambiguity.
+
+21 corrects a true MiniClient active-file hint only when public SageTV
+`IsFileCurrentlyRecording` returns Boolean.FALSE for the authorized source.
+Unknown/actual writers retain follow behavior. New adaptive handoff on a real/
+unknown writer is refused safely until its nonzero source-content position is
+qualified; original playback and provider change budget remain unchanged.
+Completed-file qualification must compare rendered content, not merely an API
+offset or a client clock. No stock Core, MIM engine or shared INI edit is needed.
+
+This is session-only Transcode with optional bounded recovery, not Copy/DVD, global INI edits,
+two-way ramp certification or a new encoder manager in either client. Admission
+limits cannot guarantee driver/GPU headroom: an encoder startup failure must
+roll back safely. Clients without the advertised optional contract retain
+their established paths; `/v1/direct/quality` revision1 below stays compatible.
+Candidate service/HTTP tests are not Android/browser/physical presentation
+qualification. Stock232 now has manager21; eight provider API rows pass with
+synthetic ACK only. Non-Pro115 completed-file manual handoff/correct content/
+captions/seek/pause passes actual renderer ACK in Media3/legacy/both GSY.
+Measured-WAN, two-way/shared quality and remaining failure/device scope are
+separate; do not claim seamless/all-device or writer adaptation from those rows.
+
+Legacy Placeshifter instead sent `videorateadapt <delta-kbps>` to one running
+patched encoder after measuring Push throughput/client buffering. MIM already
+has compatibility code, but actual output-rate response must be verified per
+encoder before claiming live bitrate support. It does not change resolution.
+
+### Development Direct quality contract (0.1.18)
+
+Clients must discover `mimDirect.sessionQualityRevision == 1` from
+`GET /v1/capabilities` before using `POST /v1/direct/quality` with the exact
+owned `token`, absolute `startMs` and lower `videoKbps`. Revision1 allows
+Transcode only, minimum250kbps,60s cooldown and two attempted reductions per
+source load. Copy, upward changes and retired tokens are refused. The reply
+uses the existing Direct session schema with a new media/caption ownership
+token, effective bitrate and change counter. Subsequent ordinary restart keeps
+that effective quality. Missing/old providers retain existing client behavior.
+
+This is one encoder/output, not simultaneous quality renditions. The current
+producer must exit before its replacement starts; published old segments remain
+readable for the normal handoff. A failed stop refuses another encoder. A
+quality change may briefly interrupt playback; clients must not retry in a
+loop or claim an accepted response is a presented frame. Shared INI/defaults
+remain unchanged. Two-way ramping and Android consumer qualification remain
+unfinished; native Push/Pull/DVD are not automatically adapted.
+
+Explicit provider-only stock232 gate:
+`py -3.12 scripts/commission-direct-quality.py --run-stock232`.
+It requires the existing canonical imported fixture/ignored commissioning
+configuration and independently idle recordings/clients; never run it as CI or
+claim it is physical Android/visible-caption proof. It has no Web Client runtime
+dependency, never accepts arbitrary source paths and retires only its own tokens.
 
 Linux development build:
 

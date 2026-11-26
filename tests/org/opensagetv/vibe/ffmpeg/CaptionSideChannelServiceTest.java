@@ -81,6 +81,16 @@ public final class CaptionSideChannelServiceTest {
     }
 
     public static void main(String[] args) throws Exception {
+        CaptionSideChannelService.ClaimRefreshGate refresh = new CaptionSideChannelService.ClaimRefreshGate();
+        check(refresh.shouldCheck(false, 0L), "initial claim discovery must not wait");
+        check(refresh.shouldCheck(false, 1L), "pending claim must be checked before every initial packet");
+        check(!refresh.shouldCheck(true, 100000000L), "active claim must not stat appdata per packet");
+        check(refresh.shouldCheck(true, 200000001L), "active claim deletion must be noticed within200ms");
+        check(refresh.shouldCheck(false, 200000002L), "released slot must discover its next claim immediately");
+        CaptionSideChannelService.ClaimRefreshGate wrap = new CaptionSideChannelService.ClaimRefreshGate();
+        check(wrap.shouldCheck(true, Long.MAX_VALUE - 100000000L), "first active check");
+        check(!wrap.shouldCheck(true, Long.MIN_VALUE), "nanoTime wrap must not refresh early");
+        check(wrap.shouldCheck(true, Long.MIN_VALUE + 100000000L), "nanoTime wrap must not starve refresh");
         CaptionSideChannelService.Session reorderedPts =
                 new CaptionSideChannelService.Session("pts-order-test", 1L, 16, 1024);
         reorderedPts.offer(2000L, new byte[]{(byte) 0xfc, 0x41, 0x42});

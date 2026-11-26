@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+bash "$ROOT/scripts/test-owned-process-api.sh"
 STOCK_STV="${SAGETV_STOCK_STV:-$ROOT/../opensagetv-vibe-core/stvs/SageTV7/SageTV7.xml}"
 if [[ ! -f "$STOCK_STV" && -f /work/sagetv/stvs/SageTV7/SageTV7.xml ]]; then
   STOCK_STV=/work/sagetv/stvs/SageTV7/SageTV7.xml
@@ -19,6 +20,20 @@ javac --release 8 -cp "$ROOT/build/classes:$CP" -d "$ROOT/build/test-classes" \
   "$ROOT/tests/org/opensagetv/vibe/ffmpeg/MimDirectSessionServiceTest.java" \
   "$ROOT/tests/org/opensagetv/vibe/ffmpeg/MimDirectHttpTest.java"
 javac --release 8 -cp "$ROOT/build/classes:$CP" -d "$ROOT/build/test-classes" \
+  "$ROOT/tests/org/opensagetv/vibe/ffmpeg/RuntimeBitrateControlTest.java" \
+  "$ROOT/tests/org/opensagetv/vibe/ffmpeg/RuntimeBitrateSelfTestTest.java"
+java -cp "$ROOT/build/classes:$CP:$ROOT/build/test-classes" org.opensagetv.vibe.ffmpeg.RuntimeBitrateControlTest
+java -cp "$ROOT/build/classes:$CP:$ROOT/build/test-classes" org.opensagetv.vibe.ffmpeg.RuntimeBitrateSelfTestTest
+javac --release 8 -cp "$ROOT/build/classes:$CP" -d "$ROOT/build/test-classes" "$ROOT/tests/org/opensagetv/vibe/ffmpeg/BufferAdaptiveControllerTest.java"
+java -cp "$ROOT/build/classes:$CP:$ROOT/build/test-classes" org.opensagetv.vibe.ffmpeg.BufferAdaptiveControllerTest
+javac --release 8 -cp "$ROOT/build/classes:$CP" -d "$ROOT/build/test-classes" \
+  "$ROOT/tests/org/opensagetv/vibe/ffmpeg/CompletedSourceProbeCacheTest.java" \
+  "$ROOT/tests/org/opensagetv/vibe/ffmpeg/MimThumbnailJobTest.java" \
+  "$ROOT/tests/org/opensagetv/vibe/ffmpeg/ScrubPreviewCacheTest.java" \
+  "$ROOT/tests/org/opensagetv/vibe/ffmpeg/ScrubPreviewHttpTest.java"
+javac --release 8 -cp "$ROOT/build/classes:$CP" -d "$ROOT/build/test-classes" \
+  "$ROOT/tests/org/opensagetv/vibe/ffmpeg/StockDvdStreamServiceTest.java"
+javac --release 8 -cp "$ROOT/build/classes:$CP" -d "$ROOT/build/test-classes" \
   "$ROOT/tests/org/opensagetv/vibe/ffmpeg/DirectWatchSnapshotTest.java" \
   "$ROOT/tests/org/opensagetv/vibe/ffmpeg/DirectWatchRecoveryTicketsTest.java" \
   "$ROOT/tests/org/opensagetv/vibe/ffmpeg/DirectWatchRestoreCoordinatorTest.java" \
@@ -27,6 +42,14 @@ java -cp "$ROOT/build/classes:$CP:$ROOT/build/test-classes" org.opensagetv.vibe.
 java -cp "$ROOT/build/classes:$CP:$ROOT/build/test-classes" org.opensagetv.vibe.ffmpeg.DirectWatchRecoveryTicketsTest
 java -cp "$ROOT/build/classes:$CP:$ROOT/build/test-classes" org.opensagetv.vibe.ffmpeg.DirectWatchRestoreCoordinatorTest
 TMP="$(mktemp -d)"; trap 'rm -rf "$TMP"' EXIT
+javac --release 8 -cp "$ROOT/build/classes:$CP" -d "$ROOT/build/test-classes" "$ROOT/tests/org/opensagetv/vibe/ffmpeg/DirectOutputOptionsTest.java"
+java -cp "$ROOT/build/classes:$CP:$ROOT/build/test-classes" org.opensagetv.vibe.ffmpeg.DirectOutputOptionsTest
+java -cp "$ROOT/build/classes:$CP:$ROOT/build/test-classes" org.opensagetv.vibe.ffmpeg.CompletedSourceProbeCacheTest "$TMP/probe-cache"
+java -cp "$ROOT/build/classes:$CP:$ROOT/build/test-classes" org.opensagetv.vibe.ffmpeg.MimThumbnailJobTest "$TMP/thumbnail-job"
+java -cp "$ROOT/build/classes:$CP:$ROOT/build/test-classes" org.opensagetv.vibe.ffmpeg.ScrubPreviewCacheTest "$TMP/scrub-preview"
+java -cp "$ROOT/build/classes:$CP:$ROOT/build/test-classes" org.opensagetv.vibe.ffmpeg.ScrubPreviewHttpTest "$TMP/scrub-preview-http"
+java -cp "$ROOT/build/classes:${CP%%:*}:$ROOT/build/test-classes" \
+  org.opensagetv.vibe.ffmpeg.StockDvdStreamServiceTest "$TMP/stock-dvd-service"
 java -cp "$ROOT/build/classes:$CP:$ROOT/build/test-classes" org.opensagetv.vibe.ffmpeg.DirectWatchRecoveryHttpTest "$TMP/watch-recovery-http"
 java -cp "$ROOT/build/classes:$CP:$ROOT/build/test-classes" org.opensagetv.vibe.ffmpeg.PluginSmokeTest "$TMP"
 java -cp "$ROOT/build/classes:$CP:$ROOT/build/test-classes" org.opensagetv.vibe.ffmpeg.CaptionSideChannelServiceTest "$TMP/caption-service"

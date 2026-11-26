@@ -4,6 +4,8 @@ output/
 dist/
 vendor/
 *.bak
+__pycache__/
+*.py[cod]
 /artifacts/*
 !/artifacts/downloads/
 /artifacts/downloads/*

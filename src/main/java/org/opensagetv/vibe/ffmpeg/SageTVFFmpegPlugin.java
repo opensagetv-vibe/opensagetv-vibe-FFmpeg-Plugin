@@ -19,7 +19,7 @@ import sage.SageTVPluginRegistry;
  * API and the companion STVi both call these methods, which edit the INI file.
  */
 public final class SageTVFFmpegPlugin implements SageTVPlugin {
-    public static final String VERSION = "0.1.6";
+    public static final String VERSION = "0.1.36";
     private final RuntimePaths paths;
     private final MimRuntime mim;
     private final LauncherRepair launcher;
@@ -31,6 +31,8 @@ public final class SageTVFFmpegPlugin implements SageTVPlugin {
     private volatile String lastHardwareReportPath = "";
 
     private static final String[] VIRTUAL_SETTINGS = new String[] {
+        "adaptiveTest.sessions", "action.adaptiveTest",
+        "runtimeBitrateTest.status", "runtimeBitrateTest.reportPath", "action.runBitrateTest",
         "health.launcher", "health.runtime", "ini.path", "ini.lastModified",
         "status.mimVersion", "status.platform", "status.last.state",
         "status.last.backend", "status.last.encoder", "status.last.hardwareDecode",
@@ -58,6 +60,7 @@ public final class SageTVFFmpegPlugin implements SageTVPlugin {
     private static final Map<String, Setting> SETTINGS = new LinkedHashMap<String, Setting>();
     static {
         add("general.enabled", "general", "enabled", "true", CONFIG_BOOL, null, "MIM Enabled");
+        add("stdinctrl.runtime_bitrate_control", "stdinctrl", "runtime_bitrate_control", "false", CONFIG_BOOL, null, "Allow In-Place Bitrate Control (Linux QSV)");
         add("hardware.backend", "hardware", "backend", "auto", CONFIG_CHOICE,
                 new String[]{"auto","vaapi","qsv","nvenc","amf","d3d12va","software"}, "Hardware Backend");
         add("hardware.hardware_decode", "hardware", "hardware_decode", "false", CONFIG_BOOL, null, "GPU Decode");
@@ -105,10 +108,11 @@ public final class SageTVFFmpegPlugin implements SageTVPlugin {
         }
         mim.capabilities(true);
         if (!refreshCaptionService()) log(lastAction);
+        StockDvdStreamService.startSessions();
         log("started version=" + VERSION + " sageHome=" + paths.sageHome);
     }
-    public void stop() { stopCaptionServices(); }
-    public void destroy() { stopCaptionServices(); }
+    public void stop() { StockDvdStreamService.stopSessions(); stopCaptionServices(); }
+    public void destroy() { stop(); }
 
     public String[] getConfigSettings() {
         String[] result = new String[SETTINGS.size() + VIRTUAL_SETTINGS.length];
@@ -120,10 +124,13 @@ public final class SageTVFFmpegPlugin implements SageTVPlugin {
 
     public String getConfigValue(String setting) {
         try {
+            if("adaptiveTest.sessions".equals(setting))return BufferAdaptiveController.testSessions();
             Setting mapped = SETTINGS.get(setting);
             if (mapped != null) return loadIni().get(mapped.section, mapped.key, mapped.defaultValue);
 
             if ("ini.path".equals(setting)) return paths.ini.toString();
+            if ("runtimeBitrateTest.status".equals(setting)) return RuntimeBitrateSelfTest.summary();
+            if ("runtimeBitrateTest.reportPath".equals(setting)) return RuntimeBitrateSelfTest.reportPath();
             if ("ini.defaultPath".equals(setting)) return paths.defaultIni.toString();
             if ("ini.lastModified".equals(setting)) return Files.exists(paths.ini) ? String.valueOf(Files.getLastModifiedTime(paths.ini).toMillis()) : "0";
             if ("health.launcher".equals(setting)) return launcher.health();
@@ -194,6 +201,23 @@ public final class SageTVFFmpegPlugin implements SageTVPlugin {
     }
 
     public void setConfigValue(String setting, String value) {
+        if("action.adaptiveTest".equals(setting)){
+            if(value==null||!value.matches("[0-9a-f]{32}:[0-9]{1,12}:[0-9]{1,5}:[0-9]{1,3}"))
+                throw new IllegalArgumentException("Exact adaptive test checkpoint required");
+            String[] fields=value.split(":");
+            BufferAdaptiveController.testOverride(fields[0],Long.parseLong(fields[1]),Integer.parseInt(fields[2]),Integer.parseInt(fields[3]));
+            return;
+        }
+        // Hidden typed test action, not a general process-control setting.
+        // Normal playback never invokes it; the MCP bridge supplies its
+        // authenticated exact-session checkpoint after checking test activity.
+        if ("action.testDvdProcessFailure".equals(setting)) {
+            if (value == null || !value.matches("[1-9][0-9]{0,17}"))
+                throw new IllegalArgumentException("Exact active DVD session required");
+            try { StockDvdStreamService.failProcessForTest(Long.parseLong(value)); }
+            catch (java.io.IOException changed) { throw new IllegalStateException(changed.getMessage(), changed); }
+            return;
+        }
         try {
             Setting mapped = SETTINGS.get(setting);
             if (mapped != null) {
@@ -216,6 +240,9 @@ public final class SageTVFFmpegPlugin implements SageTVPlugin {
                         ? "hardware test complete: " + MimRuntime.string(result.json.get("summary"))
                         : "FAILED: " + (result.ok() ? MimRuntime.string(result.json.get("summary")) : result.error);
                 return;
+            }
+            if("action.runBitrateTest".equals(setting)){
+                lastAction=RuntimeBitrateSelfTest.start();return;
             }
             if ("action.exportHardwareReport".equals(setting)) {
                 lastHardwareReportPath = HardwareReportExporter.export(paths, mim.hardwareTest(), VERSION).toString();
@@ -258,6 +285,7 @@ public final class SageTVFFmpegPlugin implements SageTVPlugin {
         if (setting != null && setting.startsWith("hardwareTest.")) return "";
         if (setting != null && setting.startsWith("health.")) return "";
         if ("action.runHardwareTest".equals(setting)) return "Runs bounded synthetic decode, hardware-filter, encode, and full-pipeline tests. It does not change the selected backend or live INI.";
+        if ("action.runBitrateTest".equals(setting)) return "Runs a bounded synthetic Linux QSV 6 -> 2 -> 2.5 Mbps test. Stop playback first; recordings and other transcodes are protected. Result and measured rates are saved under the plugin reports folder. User INI and stock files are unchanged.";
         if ("action.exportHardwareReport".equals(setting)) return "Exports the latest credential-free JSON result to the server plugin reports directory. Run the hardware test first.";
         if ("action.restoreDefaultIni".equals(setting)) return "Press twice within 15 seconds. The current live INI is backed up before the default is restored.";
         if (setting != null && setting.startsWith("action.")) return "Server-side maintenance action; stock ffmpeg is never replaced.";
@@ -275,6 +303,9 @@ public final class SageTVFFmpegPlugin implements SageTVPlugin {
         if ("action.last".equals(setting)) return "Last Maintenance Result (Read-Only)";
         if ("action.reload".equals(setting)) return "Reload Status and Hardware";
         if ("action.runHardwareTest".equals(setting)) return "Run Hardware Test";
+        if ("action.runBitrateTest".equals(setting)) return "Test Bitrate Adaptation (Linux QSV)";
+        if ("runtimeBitrateTest.status".equals(setting)) return "Bitrate Test Result (Read-Only)";
+        if ("runtimeBitrateTest.reportPath".equals(setting)) return "Bitrate Test Report (Read-Only)";
         if ("action.exportHardwareReport".equals(setting)) return "Export Hardware Report";
         if ("action.repairLauncher".equals(setting)) return "Repair SageTVTranscoder Bridge";
         if ("action.restoreDefaultIni".equals(setting)) return "Restore Default INI (Press Twice)";

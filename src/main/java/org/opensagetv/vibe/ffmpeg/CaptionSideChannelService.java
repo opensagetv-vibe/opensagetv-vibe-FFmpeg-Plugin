@@ -28,6 +28,7 @@ import java.util.Map;
 final class CaptionSideChannelService implements Closeable {
     static final int CONTRACT_VERSION = 1;
     private static final long RESERVATION_TIMEOUT_MS = 60000L;
+    private static final long CLAIM_REFRESH_NS = 200000000L;
     private static final SecureRandom RANDOM = new SecureRandom();
     private final RuntimePaths paths;
     private final Map<String, Session> sessions = new HashMap<String, Session>();
@@ -270,11 +271,21 @@ final class CaptionSideChannelService implements Closeable {
 
         public void run() {
             byte[] bytes = new byte[65535];
+            ClaimRefreshGate claimRefresh = new ClaimRefreshGate();
             while (running && socket != null && !socket.isClosed()) {
                 try {
                     DatagramPacket packet = new DatagramPacket(bytes, bytes.length);
                     socket.receive(packet);
-                    refreshClaim();
+                    // Appdata can live on Unraid FUSE/network storage. A stat
+                    // and two service locks for every ~1316-byte datagram
+                    // made the receive queue overflow during copied-video
+                    // bursts, losing caption character pairs before Android.
+                    // Discover initial claims immediately (no first-packet
+                    // loss), but revalidate an active claim at most every
+                    // socket-timeout interval. Explicit release still clears
+                    // the session synchronously; no payload queue is enlarged.
+                    if (claimRefresh.shouldCheck(session != null, System.nanoTime()))
+                        refreshClaim();
                     Session active = session;
                     if (active != null) active.push(packet.getData(), packet.getOffset(), packet.getLength());
                 } catch (SocketTimeoutException timeout) {
@@ -391,6 +402,20 @@ final class CaptionSideChannelService implements Closeable {
             }
             clearReservation();
             finishSession();
+        }
+    }
+
+    static final class ClaimRefreshGate {
+        private boolean initialized;
+        private long nextCheckNs;
+
+        boolean shouldCheck(boolean activeSession, long nowNs) {
+            if (!activeSession || !initialized || nowNs - nextCheckNs >= 0L) {
+                initialized = true;
+                nextCheckNs = nowNs + CLAIM_REFRESH_NS;
+                return true;
+            }
+            return false;
         }
     }
 

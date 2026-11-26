@@ -106,6 +106,11 @@ def main() -> int:
     ), "read-only text row remains focusable"
     assert "VIBEFFMPEG-CATEGORY-RIGHT-TITLE" not in module_symbols
     assert "VIBEFFMPEG-HARDWARE-DASHBOARD" in module_symbols
+    dashboard = next(n for n in module.iter() if n.attrib.get("Sym") == "VIBEFFMPEG-HARDWARE-DASHBOARD")
+    # The bitrate-test third action must not push results beyond the viewport.
+    heights = [float(c.text) for n in dashboard for c in n
+               if c.tag.endswith("FixedHeight") and c.text and c.text.replace('.', '', 1).isdigit()]
+    assert sum(heights) <= .98, ("Hardware dashboard clips its controls/results", heights)
     assert "VIBEFFMPEG-RUNTIME-DASHBOARD" in module_symbols
     assert "VIBEFFMPEG-AVAILABILITY-DASHBOARD" not in module_symbols
     assert "VIBEFFMPEG-HARDWARE-DASHBOARD-RESULTS-TEXT" in module_symbols
@@ -139,6 +144,9 @@ def main() -> int:
     )
     assert text.count('Name="RUN TEST"') == 2
     assert text.count('Name="EXPORT TEST"') == 2
+    assert text.count('Name="BITRATE TEST"') == 2
+    assert 'runtimeBitrateTest.status' in text and 'runtimeBitrateTest.reportPath' in text
+    assert 'action.runBitrateTest' in text and 'stdinctrl.runtime_bitrate_control' in text
     assert 'STATE:' in text and 'hardwareTest.state' in text
     assert 'MIM Version:' in text and 'status.mimVersion' in text
     assert 'hardwareTest.reportPath' not in selected_settings_expression_text(text), (

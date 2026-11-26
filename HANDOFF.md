@@ -1,5 +1,723 @@
 # OpenSageTV Vibe FFmpeg Plugin handoff
 
+## Current2026-11-26 - authorized publication preparation
+
+PUBLISH-001 user approval covers0.1.36 beta and MIM0.4.20. Full Java/service/
+HTTP/launcher checks pass; regenerated package60d58439 references current
+runtime Linux7addbdea/Windows3e6269b2. Preserve scoped physical results and
+unsupported original-stock routing/native-Safari/vendor boundaries. Wait for
+serial repository CI and verified public MIM assets before this release.
+
+## Current2026-11-26 - HLS-BUFFER-001 affected qualification complete
+
+Android HLS-006 proves the existing paced six-second producer caps completed-
+file reserve below the20s player maximum. Optional hlsBufferRevision1 and
+bufferAheadMs0..20000 preserve old callers/default six seconds. Only a source
+independently confirmed not recording gets the bounded max(6,ceil(target/1000)+3)s
+initial burst; steady -re pacing and live/unknown writer protection remain.
+Immutable request survives restart/quality; no INI/engine/native/Core edit.
+Full Java8/service/HTTP/owned-stop suite passes. Java8d380ae5 staged by guarded
+helper as0.1.36.20261126.144439; normal manager232 installation and guarded
+restart complete, independently recording/UI/client0 before restart. Installed
+99class/resource entries and stock20 verified; wrapper unchanged1e3eddf6.
+Actual QSV comparison0->burst6,20000->burst23 passes1080p59.94/AAC6. Android
+old0|6 confirmation rejected the valid23s response; client-only correction
+515609fb passes all four HLS delegates/eight seeks plus Direct/two-seek control,
+reserve up to19.806s, remote/rapid-input recovery and independent8s HDMI. All210
+prefs/CC/power restore, activity/provider0. Compact HLS-BUFFER-001 and Android
+HLS-006 results own exact scope, oracle correction and retired raw references.
+Pro deployment is explicitly user-deferred; leave its175 Push playback running.
+No175/Core/new live/WAN/vendor-wide physical verdict or publication.
+
+## Current2026-11-26 - SETTINGS-005 affected scope complete
+
+Optional hardwareBackendRevision1 requires matching native support; validated
+immutable hardwareBackend is preserved by seek/quality and confirmed against
+actual job backend/hardware/encoder before a session is accepted. Auto/old
+callers unchanged; strict unsupported choices refuse, never edit global INI.
+Normal manager122427 installed817272bb JAR/99entries identical to current local
+b8286a12 JAR despite ZIP timestamps, wrapper1e3eddf6. Guarded restart independently
+recording/UI/client0, stock20 preserved. Full provider/native tests and actual
+QSV/VAAPI Legacy/responsive12output/seek/quality-prepare rows pass; INI/engines
+unchanged and sessions0. Android115/e0d85ea1 passes controls/reset, four QSV/
+VAAPI Direct/HLS routes/eight seeks/two FF, two unsupported-AMF refusals and
+independent HDMI captions/motion/audio on Non-Pro25/stock232.210prefs/CC/power
+restored, final activity/provider0. Compact owning results and linked Android
+VALIDATION/CLEANUP retain scope;87reviewed raw files retired recoverably.
+No175/Core/engine/publication change or Windows/macOS/NVIDIA execution claim.
+Linked tasks are ledger-complete; no unrelated matrix replay is a next step.
+
+## Current2026-11-26 - FIXED-002 affected acceptance complete
+
+Normal manager0.1.36.20261126.111501 installs corrected wrapper349452c7 and
+unchanged Javaec96a781/99entries. Stock Installed Plugins/Update was used;
+non-allowlisted MCP commission correctly refused and was not bypassed. First
+idle guard aborted while our UI retired; subsequent independent recording/UI/
+client0 allowed one232 restart, all20stock hashes unchanged. Engines/default/
+live INI remain intact. Runtime proves VAAPI caption-header overflow on exact
+reported recording and corrects it with existing metadata-only ccrepack.
+Unchanged Android115/92df378a passes11Non-Pro routes/33seeks plus remote FF.
+Independent HLS HDMI shows changing captions/motion/audio; IJK HDMI shows
+motion/audio (no IJK caption claim). All210prefs/CC/power restored; final
+activity/provider0. Results/FIXED-002/INSTALL.json and linked Android compact
+validation/cleanup retain evidence. No Pro/Windows physical PASS, native Web
+VAAPI certification,175/Core/APK/publication change. Seek recovery remains
+several seconds; not an instant-seek claim. Canonical FIXED-001 evidence stays
+scoped to its earlier fixture, distinct from this real-source qualification.
+
+## Current2026-11-26 - MIM-PROBE-001 complete affected scope
+
+Normal manager0.1.36.20261126.013741 installs Javaec96a781/wrappercc794701.
+Guarded restart records independent recording/UI/client0 and stock20 matches
+before/after. INI and engines unchanged. Runtime fixes isolated short TS
+discovery/90kFPS/VAAPI error24, not Android settings or Core. The exact reported
+recording passes old/current actual VAAPI29.97/QSV59.94/software29.97 output;
+13row API policy/isolation/restart/Source-audio/HEVC/refusal suite passes.
+Android115/92df378a completes18Non-Pro/stock232 routes, actual Source6 QSV/
+software controls,2explicit failures,7compatibility cases, inline menus and
+HLS4M/current2.8M/next-default3M with continuing six-channel audio.210prefs/CC/
+power restored, final activity/owned sessions0. Results and13-row OUTPUT_API.json
+are under artifacts/results/MIM-PROBE-001; reviewed raw retired recoverably.
+No Windows runtime/vendor-wide/publication/Pro claim. Per-client original-stock
+routing remains user-deferred; original stock FFmpeg feature limits are distinct
+from modern MIM Legacy Transcode. No protected Core/INI/engine changes.
+
+## Current2026-11-25 - MIM-OUTPUT-001 development
+
+Normal SageTV manager installs0.1.36.20261125.230424/JAR5305664cd4ae8fb798657dc3f369c498ab80e826515f4e5471700fd83e6da08a
+and scoped encoder-policy wrapper. Restart verified recording/UI/client0 and
+all20protected stock hashes before/after; live INI/qualified engines unchanged.
+Optional outputSettingsRevision1 and native encoderPolicyRevision1 accept
+validated immutable resolution/FPS/codec/audio/remux intent, preserve it across
+restart/quality replacement, and return requested versus observed metadata.
+Hardware Only requires an exact owned job reporting hardware encoding; Software
+Only also needs actual software attribution. No shared INI changes.
+
+Full local suite, real CPU output/seek/INI test and installed232 software/QSV,
+concurrent-policy isolation, seek, Source AC3, software HEVC, negative-container/
+policy and omitted-options legacy Copy rows pass. First API software start502
+did not recur on unchanged reruns; cause remains unproven. Preserve failure
+report; do not call it fixed. Android affected software/QSV/HEVC/status/native-
+Pull qualification passes on final115/05697001, all203preferences restored.
+An initial HEVC repeated frame is non-repeatable in controlled comparisons;
+cause remains unproven, no speculative decoder/GOP patch. Native full mapping/
+raw-input/owned-stop and real independently decoded HEVC segment tests pass.
+commission-output-settings.py is the guarded reproducible production-API gate.
+MIM-STOCK-001 now defers true per-client stock-engine routing by explicit user
+choice to preserve existing launcher clients. Non-TS segment delivery refuses,
+not fake MKV/PS support. No Core/175/185/publication change.
+
+Current automatic-policy follow-up: stock232 normal-manager Java snapshot
+0.1.36.20261125.023018/JAR8de986335f650f768acc9ceb04952c2fd4f7c83296459e460e90e6d964007a00
+loads after independently idle restart; stock20 unchanged. A real Chrome HLS
+run reproduced missing recovery at~30s reserve because normal segment refill
+oscillation reset the adjacent250ms test. Recovery now bounds cumulative loss
+over ten high-reserve samples; recorded oscillation and sustained-drain tests
+plus the full Java/HTTP/runtime/stock-STVI regression pass. Chrome/WebKit actual
+4000→3000→3750 handoffs pass on020729. Non-Pro then proves8s recovery cannot
+be reached by paced6s HLS;023018 uses a5s floor without buffer/burst inflation.
+All four supported Non-Pro HLS delegates pass actual down/up/seek/pause/resume
+and full restoration. Current Chrome/WebKit automatic QSV in-place down/up
+pass independently measured output/same-process/frame checks; six real
+off/healthy/transient browser negatives pass. Linux WebKit native stalls even
+without adaptation; the actual native-Safari consumer row remains separate.
+See Web WEB-127/AUTOMATIC_TEST.md and Android HLS-005/AUTOMATIC_TEST.md. Do not
+infer universal/phone/Windows acceptance or publication.
+
+## Current2026-11-25 — ADAPT-001 / MCP-ADAPT-TEST-001
+
+Shared Java buffer controller and Direct buffer-report HTTP scope pass policy,
+HTTP and existing runtime-rate contracts against stock-JAR Java8. Java-only
+normal-manager0.1.36.20261125.011454/JAR87be307ccee1b0006f4f900a48db0a6d4badf73ddbec784d2d0d055e1eda3caf
+is loaded on stock232, native packages/dependencies unchanged;20stock hashes
+pass after guarded restart. Exact-session leased test override/clear uses only
+public plugin config through authenticated MCP23, not global INI/encoder edits.
+Range/CAS/lease/pause/isolation/once-only/handoff-budget tests pass. Actual
+MCP test control qualifies both-browser same-QSV packet2000/2500 changes and
+Non-Pro VAAPI presented handoffs/clear/139prefs/power/zero-session restoration.
+Corrected fully-fetched-output readiness uses actual publication freshness,
+not extra unfetched reserve. Parent ADAPT001 automatic-pressure/recovery gates
+remain open; no175/185/Core mutation or publication. Compact MCP control RESULT.
+
+## Current Windows185 - MIM-WIN-001
+
+Normal manager loads0.1.35/MIM0.4.20 with final Web3.3.0 on stock Windows
+Java8u441. Optional registered native Job start/stop is qualified: exact37ms
+blocked-writer stop, unrelated-process refusal, Non-Pro native DVD and both
+Chromium/WebKit recording-to-DVD/root/feature/chapter/Stop pass. Final installed
+Direct transcode repeated seeks/captions/EOF/zero markers pass after MIM's
+OS-owned forced-stop claim correction.37protected stock files/INI intact.
+Runtime MIM-WIN-001 is scoped-complete: Non-Pro growing HLS/Copy/Direct/classic
+controls and actual Chromium/WebKit growing consumers pass;37stock files/INI
+intact,136preferences/awake restored, test recordings/tuner released, final
+19:57Z185/232 idle/jobs/claims0. Windows in-place rate/full hardware decode
+remain unavailable; intermittent raw-QSV device failure/hung WebKit inspection
+does not recur on fresh Auto/four file/four raw tests, not claimed fixed.
+A real0x13A dump implicates Portmaster1.1.2/PMas, not Intel/FFmpeg; user says
+leave Portmaster unchanged and continue. Authorized SYSTEM V: restoration
+corrects post-reboot desktop-only mapping without new credentials/Core edits.
+Do not patch Java/Core/drivers or repeat completed Linux scopes. No publication.
+
+## Current2026-11-24 — qualified optional Linux-QSV scope
+
+MIM-QSV-001 is now corrected/qualified for ordinary Fixed Linux system-memory
+H.264/captions: normal-manager0.1.32/MIM0.4.17 installed, JAR646a8db9 and
+wrapperd2c042eb, stock20/INI/engines preserved. One-frame queue avoids the
+independently reproduced Intel async-worker SIGSEGV, preserving captions/GPU
+and existing bitrate/VBV. Non-Pro Media3/Legacy Exo actual startup/42s sustained
+seek/repeated seek/Pause/Play/EOF/no orphan pass; HDMI caption/picture reviewed.
+Auto/sitefalse restored. Runtime RESULT.md owns evidence and exact limits;
+below0.1.30/classic-failure notes are historical, not the current open defect.
+No public release or175/Windows install.
+
+Optional site/client Linux-QSV control and settings-accessible synthetic test
+are qualified to the scope recorded below. Shared RuntimeBitrateControl uses absolute
+idempotent targets, matching QSV reset plus later progress, immutable ceiling,
+bounded cooldown/recovery and uncertain-result hold; no Core/stock-FFmpeg edit.
+Self-test is in generic plugin settings and generated STVI Hardware Test;
+clients reuse its optional API. Synthetic6->2->2.5Mbps output/clock/decode proof
+uses copied INI and owned scratch, protects recordings/playback/new activity,
+saves compact report and never claims audio/caption/device certification.
+
+TEST SETTINGS RESTORED2026-11-24: normal Configure Plugin readback confirms
+hardware.backend **auto**; public plugin CAS readback confirms site **false**.
+No other user setting changed. The INI may now explicitly contain the new
+false key; do not claim original whole-file byte identity after these authorized
+settings tests. Adaptation itself never edits shared INI. Temporary forced
+classic-QSV fallback reproduced known post-seek rc139; original Auto native
+fallback retest passes. Do not certify classic QSV from the eligible CBR profile.
+
+Normal manager0.1.30/MIM0.4.16/MCP0.1.22 loaded on stock232 after independent
+0recording/UI/client restart guard1795485419161 and protected20 verification.
+JAR997a5097; wrapper00c7f0a4; engines unchanged. Actual corrected public-settings
+test PASS67.548s, measured6091.888/2016.281/2473.861kbps, same process/60fps/
+clean decode; active-playback409 refusal passes. RATE-TEST-001 ledger-complete.
+First diagnostic's inherited progressive VPP120fps mismatch is corrected only
+in private diagnostic settings, not production deinterlacing. Compact result
+artifacts/results/RATE-TEST-001/RESULT.md. Earlier MCP self-upgrade bootstrap
+activity was UNKNOWN, never zero proof; that restart is separate history.
+
+Full plugin local regression, both wrapper/package builds, Android focused
+compile/tests and Web settings Chromium/WebKit local DOM pass. Web full local
+validation passes; corrected stale test-only fresh-session/resize
+assertions and explicitly regenerated reviewed272-entry Android inventory.
+User now authorizes full affected Non-Pro/Web testing, including outstanding
+Android HLS-001/002 physical scope, superseding that earlier device skip.
+Non-Pro25/AFTMM/API25 ADB authorized, timeout0; candidate signed debug APK
+f47e91c9 installed successfully/settings preserved. Four supported Non-Pro HLS
+delegates/quality/seek/pause and Media3 actual EOF pass; live HDMI captions
+reviewed. Final Chromium/WebKit actual production-policy output/GPU/PID
+reduction/recovery pass, including fresh3segment541.168→609.249kbps in Chrome.
+All four supported Android delegates pass actual in-place reduction;
+Media3/legacy controlled-delivery4000→2200→2750 and missing-provider fallback
+pass. Focused optional/old/uncertainty/idempotency/lifecycle negatives pass.
+Compact consumer/shared results retain exact scope; no physical WAN,
+Windows/NVENC/acoustic/classic-QSV or universal certification. No publication
+or175/Windows mutation. Preserve held release and unrelated deferred tasks.
+
+## Current2026-11-21 — HLS-START-001 development complete
+
+Candidate0.1.28/MIM0.4.15 implements Android HLS-002's optional responsive
+profile. Only explicit negotiated Transcode changes segment cadence/initial
+read-ahead/QSV handling. Actual completed-source truth gates6s burst; steady
+pacing, subtitle PIDs and180s nominal window stay bounded. Known writer truth
+also enables following when the client hint is false; old/unknown callers
+retain legacy semantics. Seek/quality candidates inherit and revalidate policy.
+Full local plugin tests including HTTP/negative/lineage and source validation
+PASS; both platform packages/manifests/checksums PASS. Final packaged JAR
+7a4b44434e4f667ccc60264b68c4c2376fa168e9ade5e230a2d36e53c36d4a05.
+Current server remains unchanged; no installation/restart or publication.
+Physical GPU/Windows/Android/WAN remains untested for this candidate by user
+direction. Compact artifacts/results/HLS-START-001/RESULT.md. Serialize
+build/test/package operations within this project; independent projects only
+may compile concurrently, as documented in WORKFLOW.md.
+
+## Current task reconciliation2026-11-20
+
+Linux MIM-STDIN-001, REMOTE-001/003 provider contracts and STOCK-DVD-001 are
+ledger-complete to their existing physical/consumer scope. Web WP08-006/WEB087,
+Android GATE-001/revision502, Web052/053/055/105, Android EXPERIENCE ledgers and
+the prior stock-DVD report supply the formerly missing completion updates.
+Web023 final physical cellular/VPN is now complete. Android physical WAN,
+Windows and the two original Web intermittent stalls remain separate, not
+claimed fixed. No runtime/build/install/restart/publication in this docs-only
+reconciliation. Older ACTIVE, three-hour and pending-Linux notes are history;
+no runner remains. Workspace task.md is the concise current index.
+
+Current2026-11-19 21:43Z: paired MIM-PIPE-002 commissioning ledger-complete:
+same-channel WTTW fullGPU960s/natural ended/exit0/ENDLIST/ownedcleanup plus
+affected CBS/still/DVD/caption/control/package proof. Repeated stock20/INI/
+four-engine/JAR/wrapper checks pass. Original84256 tail absent; no exact-stall
+cause claim. Web three-hour elapsed public-HLS test now running on stock232;
+do not restart/compete. MIM-STDIN-001 legacy Fixed/Windows and unrelated
+tasks remain separate. No public release/Core/175/settings change.
+
+Current2026-11-19 21:16Z supersedes historical ACTIVE notes: installed
+0.1.27/MIM0.4.14/JARdd1fc8e0/wrapper8fc256aa verified; WTTW194346 natural
+fullGPU D/F/E completion passes960s/28640actual phone frames/exit0/ENDLIST,
+exact owned recording cleanup and restored profiles/schedule. Web caption-only
+updates100/101 installed via normal manager202559, affected actual phone
+PMT/EOF/reconnect/original UK/ordinary90sEOF pass. Stock20/INI/engines unchanged.
+Original failed84256 tail absent; preserve prefix/logs, no exact replay claim.
+Windows physical deferred; no publication or175 change.
+
+## Current2026-11-19 at17:52Z — shared-process Linux qualification complete
+
+MIM-PROC-001 moved to checklist ledger: local blocked-duplex/retained-owner/
+admission/independent linkage plus actual phone CBS natural494s/ENDLIST/Stop,
+one-picture4rows, ALADDIN20s/pixels/clock and original UK captions5rows PASS.
+JARdd1fc8e0/MIM0.4.14/stock20/INI/engines match171125/173507/174758 checks.
+Web default-HLS missing-IDR defect independently reproduced and corrected in
+its owning plugin; normal manager174337/WAR2821a856 installed. WTTW11.1 phone
+natural runner11778 ACTIVE through18:00Z, fullGPU D/F/E stage0 startup; do not
+restart or compete with its encoder/inspector. PIPE002 original-channel final
+acceptance still active. Windows physical deferred, no publication/Core change.
+
+## Current2026-11-19 at17:19Z — MIM-PIPE-002 commissioning
+
+Paired0.1.27/MIM0.4.14 normal-manager39001 update completed; Restart Later,
+independent retirement, guarded232 restart171009Z.171125 verification PASS:
+JARdd1fc8e0/wrapper8fc256aa match packages,20protected stock files/INI/engines/
+Web WAR63184ec8 unchanged. Both wrapper builds, raw EOF6/duplex/control/signal/
+actual-media/deterministic runtime and plugin package gates PASS. Physical
+phone natural-completion27016 ACTIVE; do not compete with its encoder or
+inspector. Keeper ON60s. No175/Windows/Core/publication changes. Earlier
+runner5627 and old package statuses below are historical, not active work.
+
+## Current2026-11-19 — MIM-PROC-001 / Web WEB-097 local dependency
+
+15:51Z:0.1.26 installed via normal SageTV manager; one independently idle
+guarded232 restart153119 loaded JARc234b3d8. Read-only154431 verifies stock20,
+unchanged INI/FFmpeg/probe/MIM0.4.13 and Web154016/WAR63184ec8. Actual Web health
+reports protocol1 available. Completed-original default fullQSV Stop62ms and
+independent encoder retirement pass. Natural-phone recording runner5627 remains
+active until16:00Z under Web WP11-008; do not interrupt/compete. Initial growth
+passes, software fallback is explicit, original startup/stall still separate.
+No release/Core/engine/175/Windows changes. Physical completion/teardown remains.
+
+Historical15:27Z: candidate0.1.26 built/deterministic package tests PASS, JAR SHA256
+c234b3d813555b40a0f0d6d7b3da2c866ed8e65d178ab89939982e8e5d9fd8248.
+Independent public API and existing stock-only DVD blocked-pipe/close tests pass.
+Web's affected lifecycle integration/tests pass locally. New package staged
+only as normal-manager input on idle232; manager25882 ACTIVE under Web project
+WEB097. Do not install/restart around it. Installed runtime remains0.1.25
+until that manager actually updates and the guarded global-JAR restart loads
+the new API. MIM0.4.13/engine/INI unchanged; baseline WEB097/152507 captured.
+WEB099 physical motion is now user-accepted; former in-progress notes below
+are historical. No publication or175/Windows/Core change.
+
+Web's actual stock232 natural-completion Stop deadlocked in Process.destroy
+while its feeder held buffered stdin's monitor. Browser-only correction cannot
+release that OS pipe. New optional OwnedProcessControl protocol1 exposes the
+existing OwnedProcessStop implementation to other plugins by actual Process
+reference only; no new PID/shell/remote endpoint or duplicated kill algorithm.
+Independent-package blocked-duplex/ownership regression added. Not packaged or
+installed yet; runtime remains0.1.25. Current iPhone WEB099600s motion test is
+not interrupted. Web consumer integration/affected close tests and normal
+manager commissioning remain required; Core/engine/INI/Windows unchanged.
+
+## Current2026-11-18 13:19Z — MIM-STDIN-001 dependency installed
+
+Normal manager installed unpublished0.1.25/MIM0.4.13 after guarded232 restart
+13:09:31Z and independent0recording/UI/client proof. Packaged JAR34808b77 and
+wrapper hashes match server;20protected stock/INI24c1652f/FFmpegceaf236a/probe
+b9b6bed1 are unchanged. Six exact raw-stdin count/hash/control/media/init and
+deterministic package gates PASS; four engines unchanged, both wrappers built.
+Actual one-picture DVD now produces one HLS segment/highlight, so missing
+input is fixed. Web Safari zero-target manifest failure is separately owned
+and under qualification. Continue affected still/Fixed/caption/teardown tests;
+Windows physical deferred. No publication/Core/stockFFmpeg/INI edits.
+
+## Candidate24 REMOTE-003 loaded; Android and Web browser rows pass
+
+Final browser update: Web013345 actual stock232 Chrome153/WebKit source-image/
+coexistence/full-QSV/quality recovery/abort and independent preview retirement
+PASS. No extra playback stream or Core/INI/engine change. User-owned physical
+iPhone HDMI acceptance follows; Windows remains deferred. Compact Web053
+BROWSER_ACCEPTANCE and owning REMOTE-003 PROGRESS retain exact scope; prior
+browser-in-progress text below is historical, not current status.
+
+Current2026-11-15 Chicago: actual provider image/cache/identity/expiry gates
+PASS. Android115/8f3e6c05 now passes Media3, legacy Exo, Copy, GSY/Media3 and
+native-off preview coexistence/fallback on Non-Pro25/stock232.53 focused JVM
+tests and65 source contracts pass; settings restored and final0activity/Direct.
+Web053 source consumer is built/staged for normal manager installation; actual
+Chromium/WebKit qualification follows. User will perform physical iPhone HDMI
+testing afterward. No stock Core/INI/engine change or publication. Historical
+unhooked-client/provisional provider wording below is superseded.
+
+Normal manager installed corrected24 JARc4fc5f0c / ZIP0bbee59d, never earlier
+c76b2990. Fresh immediate restart guard1794788430027ms UTC independently
+0recording/UI/NetworkClient; post1794788484800ms UTC0activity/encoders and
+20stock hashes. All INI/three engine hashes match23/22 baseline. Loaded source
+preview1/previewLease1,0active sessions/leases. Actual API image/cache/independent
+fixture byte-match checks have reached the real120s no-encoder lease-expiry
+wait (driver99213); final receipt/consumers/coexistence remain OPEN. Do not stop
+at this provider checkpoint or call it Android/Web feature certification.
+
+Update:002136Z FIVE actual API rows PASS, including independently matching
+40s/10s JPEGs, cache47ms versus718ms first image, stale refusal and real120s
+expiry. Final1794788623437ms UTC0activity/playback/preview leases, stock20
+verified. Keep source10/source40 JPEGs for active consumer comparison. Android
+pure preview-client source/five tests now exist but are unhooked; JVM41979 is
+running, installed APK remainsc90 and Web source unchanged. Continue consumer
+integration/coexistence, not a provider checkpoint stop.
+
+### Historical source/packaging checkpoint
+
+Optional source-owned preview reuses ordinary MIM single-frame MJPEG, not the
+blocking stock GenerateThumbnail API or another playback stream. Source now
+has finite owned ThumbnailJob, bounded memory/identity/cancel cache and POST
+exact-token preview route/revision. Initial job/cache tests PASS; HTTP/service
+qualification, packaging/manager/actual-image/consumers remain open. Windows/
+always-transcode/unisolated policy unavailable. Do not install/claim24 from
+these partial tests. Results/REMOTE-003/PROGRESS.md records before/after scope.
+Stable suite34241 PASS including binary HTTP/source release/preview-only
+lease capacity/writer/teardown with zero new playback producers. Actual MIM
+baseline generates4655byte JPEG, exit0. Candidate24 packaging is in progress;
+The earlier source-only checkpoints below are historical; loaded state above
+supersedes them. Consumers remain unqualified.
+
+## Current23 loaded: REMOTE-002 Linux scope COMPLETE
+
+Fresh restart guard1794785242747ms UTC0activity; loaded JAR879c0900 matches
+package, post1794785292527ms UTC0activity/encoders and20stock hashes. INI and
+all three engines match22 baseline.232821Z real API miss42s/hit42s/hit999999
+clamped86016ms/not_needed zero pass, final1794785319699ms UTC0activity/Direct.
+Non-Pro25/Android115c90 affected Media3232910Z and legacy233115Z physical
+seek42s/actual new frames/pendingfalse/pause/resume and source-owned traces
+PASS; reviewed burned46.813s/readable42/44/46s cues in both captures. Actual
+audio decoder identities independently distinguish the HTTP families. All
+136prefs/CC/power restore, final1794785475627/1794785593048ms UTC0activity/Direct.
+No Android rebuild, repeated network matrix, Core/INI/engine change or release.
+REMOTE-002's Linux scope is complete; remote quality/shared experience parents
+remain open for their separate remaining requirements. Windows deferred.
+Exact contracts now documented in docs/DIRECT_SESSION_CONTRACT.md.
+
+## REMOTE-002 candidate23: normal-manager installed, guarded restart pending
+
+Local Java8/source/HTTP/service/launcher and bounded cache tests PASS. Source
+and ffprobe file identities (regular/fileKey/size/mtime/creation) must match;
+strict public writer=false on every request,32entry LRU, no negative cache or
+probe under shared lock, lifecycle-clear epoch guards. Existing mandatory
+duration/seek bounds remain; unknown/live/identity-less sources use original
+bounded probe. No TTL/disk/background/encoder/Core/INI change.
+Normal deterministic23 package JAR879c0900, JAR ZIP1e4edbf2; Linux System ZIP
+721b527d and MIM0.4.12 package6a16b5a9 unchanged. Shared stager verified plugin
+ID/type/ZIP boundaries/checksums and normal SageTV manager installed23 through
+the owned browser UI, reporting RESTART. Runtime22 remains until restart.
+The first restart guard correctly refused the retiring owned Web UI; no
+restart occurred on refusal. Subsequent idle proof1794785210071ms UTC is
+zero recordings/UI/NetworkClient/encoders; protected20 bytes verified. INI and
+three engine hashes match the22 baseline exactly. Fresh immediate guard still
+required before actual restart; then cache API and affected Non-Pro source/
+content/caption/seek checks, not repeated network/negative matrices.
+
+Current22 consumer sub-gates now pass pending seek/STOP cancellation,
+prepare/candidate-media failure (both Android HTTP families), old/missing
+quality capability and native Fixed-Off/actual Copy fallback. Settled fast
+captions pass GSY/Media3230959Z (burn25.092s,24/24.5s cues) and legacy231349Z
+(burn25.058s,23.5/24/24.5s cues). Both have actual4000->2800->3500 renderer
+commits/42s and5s seek/pause, current-generation diagnostic traces, restored
+136prefs/CC/power and final zero activity/Direct. Detailed Android result is
+authoritative; no physical WAN/HDMI/audible-sync or publication claim.
+
+## Current22 loaded: shared two-way quality and exact producer proof
+
+Negotiated qualityStartRevision1 accepts session-local initial videoKbps
+(default6000 for legacy callers); ceiling is immutable across handoffs/seeks.
+qualityRecoveryRevision1 requires explicit recovery=true, maximum25% increase
+and original ceiling, same60s cooldown/two-attempt total budget. Legacy quality
+stays downshift-only. Exact MIM PID attribution replaces ambiguous same-input/
+newest-job matching during overlap; missing PID stays unknown. Local service/
+HTTP/Android custody/advisor tests/builds PASS. Normal-manager22 is loaded,
+JAR4280236b, restart guard1794771042623ms UTC independently0activity and
+post1794771092382ms UTC stock20/INI/engines unchanged.193610Z11API rows PASS,
+synthetic ACK only, real60s recovery/ceiling/cooldown.195109Z exact owned
+wrapper+child witnesses independently prove both overlap producers use VAAPI
+decode/deinterlace/encode. Results/REMOTE-001/PROGRESS.md records hashes/scope.
+Android current115c90a2193 corrects the stale seek guard and preserves adaptive
+budget across seeks. Exact Non-Pro25/stock232 measured network Media3215855Z
+4000->1800->2250 and legacy220349Z4000->2000->2500 functional/control rows PASS;
+actual renderer ACK, stock42s output and pause/resume. Both GSY delegates pass
+manual4000->2800->3500 and production requested/accepted/unknown-display trace.
+Media3 fast and settled GSY/legacy captions are readable; early other recovery
+captures need settled follow-up.222354Z client prepare503 keeps actual original
+A/V/1producer, final0activity/0Direct and protected20/settings restored.
+External HTTP1.0 test forwarding caused artificial starvation; known-length
+HTTP1.1 reuse matches native control. No production thresholds were weakened.
+Continue candidate failure/seek/STOP/optional fallback/remaining consumer gates,
+not a checkpoint or REMOTE-001 closure. No provider/runtime change since22.
+
+## REMOTE-001 shared Android/Web experience batch IN PROGRESS
+
+CURRENT21 is manager-loaded: restart guard1794768410807ms UTC independently
+0recording/UI/native; post1794768460939ms UTC exact JAR432cdb12, protected20/
+shared INI/engines unchanged. Focused service/HTTP/deterministic package and
+EIGHT actual API184850Z rows pass (synthetic ACK only). Non-Pro Media3/115
+APK82ceb4ef184908Z correct burn21.755s after handoff and45.812s after42s seek,
+readable captions and actual ACK/reported pause controls. Continue remaining
+affected rows; no publication. Update: legacy185137Z, GSY-Media3185407Z and
+GSY-legacy185911Z also pass all four scoped completed-file handoff/content/
+caption/seek/pause rows. Android32JVM/58backend/5quality/39MCP tests pass,
+136prefs/CC/power restored. Final1794769295674ms UTC0activity/encoders, stock20
+verified. Continue remaining failure/supersession/fallback/network/two-way/
+independent GPU-overlap qualification, not repeated completed device rows.
+
+The21 dependency correction: Android115 APK82ceb4ef ahead-preroll now gets
+actual frame-ACK6000->4200 and reported seek/pause in Media3/legacy/GSY-Media3,
+but independent burned content remains near zero after a42s reported seek.
+Isolated stock232 provider start42s reproduces: active=false frame42.042s,
+active=true frame0. Actual Android source is the canonical file, not a wrong
+fixture; MiniClient supplied a stale true timeshifted hint. Client cannot infer
+server writer truth from that bit.21 uses existing public SageTV API to remove
+true hint ONLY when IsFileCurrentlyRecording is strictly Boolean.FALSE;
+unknown/real writers preserve follow. New adaptive handoff refuses unqualified
+real/unknown writers while leaving original playback/budget intact. No engine/
+INI/Core change. Earlier failure is corrected in Media3; remaining affected
+burned-picture/current-clock gates continue. Installed runtime is21.
+
+CURRENT manager20 is LOADED on stock232 with optional atomic qualitySeekRevision1.
+Fresh restart guard1794765278031ms UTC proved0recordings/UI/native; loaded proof
+1794765334256ms UTC and exact JAR7173e907 verified. All20 protected stock files,
+shared INI/three engines unchanged. Seven real API rows175657Z pass pending/
+committed atomic seek plus existing handoff, with SYNTHETIC ACK only. Android
+115 production-menu test retains original but fails publication reserve; its
+client preroll correction and actual frame/caption gates remain open. No
+publication or Core/engine replacement. Prior checkpoints below are historical.
+
+The atomic qualitySeekRevision1 design addresses Android's native
+seek can race prepare/presentation commit: old token may disappear after commit,
+candidate restart is refused before commit. Choosing a token, blocking the UI
+or replaying an ordered seek cannot resolve that ownership race client-only.
+New existing-owner /quality/seek resolves exact old/candidate lineage once,
+including expiry; foreign/stale/STOP cases refuse and no source resurrects.
+No Core/INI/engine changes. Complete service/HTTP/strict lineage suite,
+deterministic package/normal-manager install/restart/actual API pass; affected
+Non-Pro consumer gates remain required. Runtime232 is20. Do not stop at
+this provider checkpoint, publish, or mark Android/video acceptance from it.
+
+LATEST: normal manager19 is LOADED on stock232. Optional handoff1 production
+API five rows PASS20261115T160422Z (SYNTHETIC presented ACK, not renderer proof),
+complete service/HTTP suite and failed-start/cancel/expiry/capacity gates pass.
+Installed JAR matches0f984b75;20 stock hashes/INI/three engines unchanged, final
+0activity/encoders/Direct sessions. Compact results/REMOTE-001/PROGRESS.md.
+Web/Android consumers and actual presentation/caption/GPU attribution gates
+remain OPEN;19 is unpublished. Prior18 checkpoints below are historical.
+
+Latest clarification: user permits temporary overlap while the new stream is
+prepared/switched, not a permanent rendition ladder. This supersedes the strict
+single-encoder policy described in historical checkpoints below. New optional
+qualityHandoffRevision1 adds prepare/presented-commit/abort with one global
+pending candidate,45s monotonic expiry, capacity/seek/STOP/stale-token guards;
+legacy /quality revision1 remains unchanged. First service/HTTP suite passes,
+final cancellation-race hardening/consumer/device/deployment gates still open.
+Stock232 remains manager18; no new candidate installed at this checkpoint.
+Placeshifter audit: MiniPlayer1872 estimates Push throughput/client buffering;
+FFMPEGTranscoder1775 writes videorateadapt through stdin; legacy FFmpeg changes
+video codec bitrate in place. MIM already has command forwarding/compat code,
+but actual output-rate support per GPU encoder must be measured, not assumed.
+
+LATEST: stock232 manager18 is LOADED; actual Direct capability revision1 and
+seven provider gates PASS, including VAAPI hardware decode/encode6000->1000,
+published old media, token/cooldown/Copy refusal, preserved quality on42000ms
+seek and exact teardown. Shared INI/three engine hashes and20 stock hashes
+unchanged, final0activity/encoders. See results/REMOTE-001/PROGRESS.md; Android
+consumer/visible captions/two-way quality remain open. Earlier checkpoints below
+describe installation progress, not the current loaded version.
+
+Latest2026-11-15: manager update18 completed and requests RESTART. Its pending
+state is not a runtime failure/pass. Both restart attempts use fresh independent
+0recordings/UI/native-client proof; unknown/stale activity aborts. Plugin-owned
+ffmpeg.real.ini and all three existing runtime executables hash-identical before/
+after manager installation; stock20 hashes pass. New JAR ZIP SHA256
+9d2fe028cab68bc50307c712adb1ef70282fad29f9364d58071d99675eb810e4,
+JAR SHA25663d8e0c4d95b8d03db064a93cd68265a2c9accbba560def5500ef2fdec9b2da8.
+Confirm running revision1 after restart, then affected Direct/client rows.
+
+Current local candidate0.1.18 adds optional revision1 session-only Direct
+quality reductions, exact-token/lifecycle guards, cooldown/two-attempt budget,
+caption/deinterlace/source ownership and default preservation. User rejects
+multi-rendition encoding: quality now stops/confirms the old producer before
+starting its replacement, retaining old published media for handoff. Service
+regression proves STOP precedes new launch and refuses unconfirmed termination
+without allocating another session. Latest complete Java/service/HTTP suite PASS.
+The prior HTTP fixture slept through STOP; corrected to obey existing MIM
+control, not relaxed production termination. Candidate is NOT installed:
+stock232 still has17/MIM0.4.12. No engine/Core/INI replacement or publication.
+Revision1 is downshift-only; two-way ramping/Android physical consumption open.
+
+Earlier task-addition checkpoint:
+
+User explicitly requests all useful Web transcoding/remote improvements for
+Android too, without requiring Client Extension/Web for normal playback.
+Audit proves Direct service hardcodes6000k and has no per-session quality API;
+client cannot change that existing producer via supported current contract.
+Add bounded optional quality capability to this existing owner, not shared
+INI edits, another transcoder or Web dependency. Linked Android EXPERIENCE-
+002/004/005; owning TASKS contains gates. No plugin runtime changes/install
+or physical results yet at task-addition checkpoint; current loaded1.17 stays.
+
+## DVD-SPU-002 COMPLETE (2026-11-10; VCE-014)
+
+Supersedes progress below. Actual manager0.1.17/c84b2a4e on stock232 passes
+sparse Transcode first/post-seek long-pause Spanish/full_gpu, Copy inventory
+with revision3 client remap, PAL controls and real child/Standard Disable/
+old-client Native fallback. Bounded5s/8MB per-job probe/direct stderr avoids
+missing SPUs/Linux mirror circular wait; public owned ProcessHandle fixes
+Java11 buffered-stdin close deadlock, blocked-pipes regression PASS. Shared INI,
+MIM0.4.12 engines/Core untouched. Original settings/power restored,
+final0activity/no child. Extension artifacts/results/VCE-014/RESULT.md retains
+evidence/limits. Windows physical DVD DEFERRED; candidates unpublished.
+
+## VCE-014 dependency IN PROGRESS
+
+Current1.17 is LOADED after guarded restart. Sparse physical0x22/wire66 first
+start visibly passes Spanish. Seek50s/long pause restores both DVB tracks,
+selected bitmap3, advancing A/V/full_gpu; visible cue after seek still pending.
+Extension1.14 separately corrects first-input representation clock custody and
+actual-sector angle guard. Stock hashes intact, shared INI and engines unchanged.
+
+Newest1.17 candidate is manager-installed, awaiting guarded restart.1.16 wider
+probe reproduced a15s identity wait and correctly chose Native; it was NOT a
+Transcode pass.1.17 routes child stderr directly to the plugin reader (per-job
+log_ffmpeg_stderr=false), avoiding MIM's Linux raw-input mirror circular wait;
+MIM engine remains0.4.12. Shared INI remains untouched. Focused suite/package
+passes; actual sparse seek/subtitles still pending. Extension1.13 owns angle
+resync; compact Extension VCE-014 report records exact failures and partial passes.
+
+Latest runtime1.15 /6a417454 on stock232. Sparse Spanish wire66 visibly passes
+Transcode, PAL Copy/Transcode English passes. Post-seek+pause A/V recovered but
+SPUs absent: actual input header has no subtitle streams because ordinary0.5s
+probe misses the next authored cue. Candidate1.16 changes only the job snapshot
+to bounded5s/8MB probe;1.12 companion rejects omitted declared/selected streams
+and safely uses Native instead of silently removing subtitles. Shared INI and
+hardware policy remain unchanged; MIM0.4.12 unchanged. Focused suite/package
+pass, manager install in progress, affected physical reruns pending.
+
+1.14 actual startup deadline reproduced a provider-close deadlock: Java11
+Process.destroy waits on buffered stdin held by a blocked writer; thread dump
+20261110T052250559549Z proves it. Exact owned FFmpeg child324 was recovered
+under fresh0recordings/only abandoned testUI, no server restart/Core mutation.
+Candidate1.15 uses public Java9 ProcessHandle to stop this process tree without
+pipe monitors; unsupported Java8 declines optional DVD mode, normal playback
+unaffected. Both-pipes-blocked regression passes. Per-session INI snapshot
+enables input info (MIM normally overrides CLI loglevel), keeps shared INI byte
+identical and cleans generated snapshots on close/start failure. Engines stay
+0.4.12; actual physical correction still pending.
+
+Sparse physical DVD SPU0x22 loses identity when converted to DVB. Client alone
+cannot recover this from two und output tracks. Candidate1.14 exposes bounded
+input-probe physical IDs before first transformed OPEN; unknown syntax must
+fail safely to Native. Unit suite passed identity implementation; package and
+physical requalification pending. Loaded232 remains1.13, engine0.4.12 unchanged.
+Extended PAL/angle/scan gates remain active; Windows explicitly DEFERRED.
+Fresh borrowed settings/awake lease ACTIVE; Extension VCE-014 owns restoration.
+
+Linux DVD service qualification COMPLETE2026-11-10 to recorded NTSC/ALADDIN
+scope. Windows185 explicitly DEFERRED, never accessed. Stock232 real manager
+loads1.13 JARf179a083e69c7f10aa021e6d9b3c415ee6351e5e9496614a23cfff59b1ad601f;
+engines0.4.12 unchanged. Atomic stopped-provider/creation guard, active-session
+cleanup and bounded exact-session real child failure tests pass. Physical
+Standard Disable, real full_gpu session4 failure -> advancing Native/HDMI and
+fresh provider-disabled Native load pass. Copy and full_gpu Transcode English/
+Spanish bitmap ordering, seek/long pause controls retain scoped acceptance.
+Client07 fixes empty-PES native-menu parsing and viewport; do not attribute
+that source error to MIM. Public114 no-ack client stays Native/no child.
+All borrowed options/hook/136prefs/power restored;0recordings/UIs/clients,
+protected stock files PASS, no DVD orphan. Compact Extension VCE-003 result
+owns numeric evidence/format limits. No commits/publication or Core replacement.
+
+## Latest loaded and scoped physical result
+
+0.1.11/5a330dc0 now loaded through actual manager on stock232; fresh0recordings/
+UIs/clients guard and protected hashes PASS. Canonical Copy English/Spanish
+and full_gpu Transcode English subtitle identity visually pass after ordered
+SPU mapping, with client05's palette/bitmap-track fixes. No MIM engine/Core
+change. Android and companion test settings/power restored, final idle proof.
+Full provider-failure/Standard-Disable/lifecycle and Windows185 qualification
+remain open; user leaves Windows PENDING. No publication/commit. Earlier
+not-yet-loaded statements below are historical. See Extension compact report.
+
+## STOCK-DVD-001 subtitle-identity correction
+
+Development0.1.11 is packaged/tested and catalog staged (CASa05453b1), not yet
+loaded. Actual canonical VOB ffprobe order is SPU0x21 then0x20. Generic0:s?
+reverses authored selectors after remux/DVB conversion; both output languages
+are und, so client ordinal filtering alone cannot recover their origin.
+Use fixed bounded optional physical0x20..0x3f maps instead. Focused stock-JAR
+suite, deterministic Linux/Windows packages and local5s Copy probe pass:
+outputSPU0x20 then0x21. JAR5a330dc0. Same MIM0.4.12; protected stock files stay
+untouched. Actual manager install/idle restart and bitmap/language retest next.
+Windows185 remains PENDING by user direction, not a current Linux blocker.
+No release/commit. Extension VCE-003 compact report owns physical observations.
+
+## STOCK-DVD-001 runtime checkpoint (2026-11-10)
+
+Actual manager0.1.10 development loaded on stock232, JAR5c9b354b. Protected
+stock hashes PASS after fresh0recordings/0UIs/0clients guarded restarts. Engines
+remain MIM0.4.12. Stock-only service/optional SPI separation is exercised by
+Extension/Non-Pro25: Copy/Transcode starts and source-NAV anchored seek30 reach
+independent HDMI; Transcode reportsfull_gpu, Copy reportscopy. Spanish menu
+selection reaches clientstream48513 and independent HDMI440Hz tone. Exit7
+regression first failed (EOF wrongly complete);0.1.10 bounds exit-status
+inspection and exposes an IOException rather than clean EOS. Stock-JAR Java8
+plugin contracts and deterministic Linux/Windows packaging PASS. Physical
+provider-failure fallback/lifecycle/Windows qualification remain open. Windows
+185 SSH unreachable this session; no Windows mutation or physical pass.
+No release. Extension compact VCE-003 qualification record owns cross-project
+observations; newer menu/title transition failure stays open in Extension.
+
+## STOCK-DVD-001 / VCE-003 active migration (2026-11-09)
+
+User requests remaining stock Core migration. Development0.1.9 extracts the
+existing DVD finite-stream implementation into StockDvdStreamService (fixed
+contract1), with a thin optional legacy Core-SPI adapter. Stock-only classpath
+resolves the service/Session without sage.DVDStreamTransform*, bounded finite
+and full-output-queue shutdown tests pass. Process ownership stays here, never
+in Extension/MCP/Android. Service/HTTP status has no optional Core linkage.
+Same MIM0.4.12 engines, existing copy/VOB/transcode/INI semantics unchanged.
+Not yet installed or physically qualified. Public0.1.6 and qualified local
+0.1.8 caption fix remain distinct; do not relabel their evidence for0.1.9.
+
+## STOCK-CEA-001 corrected (2026-11-09)
+
+Parent STOCK-005 found malformed CEA608 text in independent HDMI even with a
+fresh90s fixture using2s captions. Isolated loopback31920 kernel drops increase
+15795 in one run (54401->70196), identical RcvbufErrors delta; Android cannot
+reconstruct lost upstream character pairs. Public0.1.6 stays immutable. Local
+unpublished0.1.8/MIM0.4.12 candidate removes per-datagram FUSE stat/service-lock
+work while preserving initial claim discovery and200ms active lifecycle checks.
+All stock-JAR Java8/STVI/caption/session/recovery/launcher tests pass, including
+monotonic wrap/pending/released claim checks. Deterministic package checks pass.
+Real manager installs0.1.8, guarded idle restart21:48:06UTC loads it with stock
+hashes intact. Fresh2s and original500ms fixtures now show complete readable
+HDMI text; both caption socket drops and kernel receive errors remain0 across
+161117 observed datagrams. Off/CC1/CC2/Off/CC1, pause/resume and fast fixture
+FF/REW event225 recovery1048/1033ms pass. This is caption/output recovery, not
+exact-frame seek evidence. Compact artifacts/results/STOCK-CEA-001/RESULT.md;
+parent container commissioning/restoration remains separate.
+No Core/native/stock FFmpeg replacement; no guessed Android timing delay.
+
+## Current stock232 dependency candidate (2026-11-09)
+
+STOCK-MAP-001/parent container STOCK-005 packages MIM0.4.12's automatic A/V
+mapping correction as unpublished plugin0.1.7. Public0.1.6 remains immutable.
+No new Java API/launcher/dependency policy; wrappers rebuild against unchanged
+engines. Stock232 actual unmapped H.264 fallback previously yielded940bytes
+without A/V, while explicitly mapped MPEG-2 and owned Direct/DVB pass. Preserve
+INI, install/update only through manager, guard restart and recheck Core hashes.
+Stock-JAR Java8/JDK11, session/caption/launcher/STVI, deterministic packaging,
+both wrapper builds and real-media mapping tests pass. Actual manager updated
+the Standard plugin to0.1.7/MIM0.4.12; guarded restart20:15:58UTC loaded it with
+unchanged stock protected hashes and preserved INI. Previously failing unmapped
+TheChase Fixed/DVB, endpoint-unavailable legacy Fixed fallback, and re-enabled
+Direct VAAPI transcode/DVB seek/pause gates pass on Non-Pro25. HDMI confirms
+picture/readable bitmap captions. Matching STVI0.1.7 metadata update now returns
+Done-OK in the real manager, with no extra restart; STOCK-MAP-001 is complete.
+Only parent commissioning/restoration remain. No public release or new Windows
+physical qualification is claimed; engines are unchanged.
+
 ## Canonical repository / 0.1.6 (2026-10-21)
 
 PLUGIN-RENAME-001 published the requested naming-only beta. GitHub/local root
